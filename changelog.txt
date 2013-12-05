@@ -1,0 +1,7 @@
+Parallax Free Changelog
+
+****************************
+
+Version 1.0.0 (12-5-13)
+
+Initial Release
