@@ -13,13 +13,33 @@ License URI: http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or lat
 /********************************************************************************************************************/
 /******************************************** MAIN HTML STYLES ******************************************************/
 /********************************************************************************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Trocchi|Quattrocento+Sans:400,700);
+
 body {
 	color: #555555
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 15px;
+	color: #417d86;
 	font-weight: 400;
+}
+
+a {
+	margin: 1px;
+	color: #00525d;
+	text-decoration: none;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+a:hover {
+	color: #00525d;
+	text-decoration: underline; 
 }
 
 table .label {
@@ -84,22 +104,32 @@ header {
 	clear: left;
 }
 
-/********************************************************************************************************************/
-/******************************************** HEADER ****************************************************************/
-/********************************************************************************************************************/
+/*****************************/
+/* HEADER ********************/
+/*****************************/
 
-/*======================================= SOCIAL ==============================================*/
+/* SOCIAL ==============================================*/
 
 header #social .icons a {
 	float: right;
 	margin-left: 5px;
 }
 
-/*======================================= DETAILS =============================================*/
+.icons {
+  margin-top: 15px;
+}
+
+/* DETAILS =============================================*/
+
+#header_section.container-full-width {
+	background: #fff;
+}
 
 header#cc-header h2.site-title {
-	margin-bottom: 5px;
-	font-size: 38.5px
+	margin-top: 30px;
+	margin-bottom: 12px;
+	text-shadow: 3px 2px 1px #d5d5d3;
+	font-size: 62px;
 }
 
 header#cc-header h2.site-description {
@@ -123,15 +153,19 @@ header#cc-header p {
 	font-size: 1.2em;
 }
 
-/*======================================= SEARCH ===============================================*/
+/* SEARCH ===============================================*/
 
 header #search #searchform {
 	float: right;
 }
 
-/********************************************************************************************************************/
-/******************************************** MENU ******************************************************************/
-/********************************************************************************************************************/
+/*****************************/
+/* MENU **********************/
+/*****************************/
+
+#navigation_menu.container-full-width {
+	background: rgba(0, 82, 94, 0.9);
+}
 
 #navigation {
 	margin-bottom: 20px;
@@ -145,6 +179,19 @@ header #search #searchform {
 	padding: 5px 0;
 	-webkit-border-radius: 1px;
 	border-radius: 1px;
+}
+
+.main-navigation .nav > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 1px 1px #003d46;
+}
+
+.main-navigation .nav > li > a:hover {
+	background: #10434b;
+	color: #fff;
 }
 
 .main-navigation .nav li ul li ul {
@@ -170,9 +217,96 @@ header #search #searchform {
 	background: none;
 }
 
+.main-navigation .nav li ul.dropdown-menu .active > a {
+	background: none;
+	background-color: #00525E;
+}
+
+.main-navigation .nav li ul.dropdown-menu .active > a:hover {
+	color: #eeeeee;
+}
+
 #navigation #searchform {
 	margin-right: 15px;
 }
+
+.navbar-search .search-query {
+	outline: none;
+	border: 1px solid rgba(62, 123, 134, 0.3);
+	-webkit-border-radius: 2;
+	-moz-border-radius: 2;
+	border-radius: 2;
+	background: rgba(100, 149, 158, 0.59);
+	color: #356c75;
+}
+
+.navbar-search input[type=text] {
+	outline: none;
+	-webkit-transition: border 0.30s ease-in-out;
+	-moz-transition: border 0.30s ease-in-out;
+	-ms-transition: border 0.30s ease-in-out;
+	-o-transition: border 0.30s ease-in-out;
+}
+
+.navbar-search input[type=text]:focus {
+	border: 1px solid rgb(22, 98, 110);
+	box-shadow: 0 0 5px rgba(22, 98, 110, 1);
+}
+
+.navbar-search .search-query::-webkit-input-placeholder {
+	color: #dddddd;
+}
+
+.navbar-search .search-query:-moz-placeholder {
+	color: #dddddd;
+}
+
+.navbar-search .search-query::-moz-placeholder {
+	color: #dddddd;
+}
+
+.navbar-search .search-query:-ms-input-placeholder {
+	color: #dddddd;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+	text-shadow: none;
+}
+
+.navbar .btn {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.navbar .btn-navbar {
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
+.navbar .btn-navbar {
+	border-color: #00515d;
+	background: #2c828f;
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active {
+	background: #3295a4;
+	color: #ffffff;
+}
+
+.navbar .current-menu-ancestor.dropdown >a {
+  color: #ffffff;
+}
+
+.navbar .nav li.current-menu-ancestor.dropdown > .dropdown-toggle .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+
+/*SARAH END*/
 
 .current-menu-ancestor.dropdown {
 	background-color: #111111;
@@ -188,15 +322,22 @@ header #search #searchform {
 }
 
 @media (max-width: 979px) {
+
 	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
 		font-weight: normal;
 	}
+	
+	.navbar .nav-collapse .nav > li > a {
+		color: #fff;
+	}
 
-	.navbar-inverse .nav-collapse .nav > li > a:hover, .navbar-inverse .nav-collapse .dropdown-menu a:hover {
+	.navbar-inverse .nav-collapse .nav > li > a:hover, 
+	.navbar-inverse .nav-collapse .dropdown-menu a:hover {
 		color: #ffffff;
 	}
 
-	.navbar-inverse .nav-collapse .nav > li.current-menu-item > a, .navbar-inverse .nav-collapse .nav > li.current-menu-ancestor > a {
+	.navbar-inverse .nav-collapse .nav > li.current-menu-item > a, 
+	.navbar-inverse .nav-collapse .nav > li.current-menu-ancestor > a {
 		color: #ffffff;
 	}
 
@@ -215,9 +356,9 @@ header #search #searchform {
 	}
 }
 
-/********************************************************************************************************************/
-/******************************************** MAIN CONTENT **********************************************************/
-/********************************************************************************************************************/
+/*****************************/
+/* MAIN CONTENT **************/
+/*****************************/
 
 .container {
 	background: transparent;
@@ -245,10 +386,47 @@ article.post, article.page, article.attachment {
 	float: left;
 }
 
-/*==================================== POST AND PAGE CONTENT ===========================================*/
+/* POST AND PAGE CONTENT ===========================================*/
+
+#page_section_section.container-full-width,
+#single_page.container-full-width,
+#archive_page.container-full-width {
+	background: #fff;
+}
+
+#single_page.container-full-width,
+#archive_page.container-full-width {
+	padding-top: 30px;
+}
+
+#blog_post_page_section.container-full-width {
+	padding-top: 30px;
+	border-top: 8px solid #00525d;
+	background: #fff;
+}
+
+#page_section_section.container-full-width {
+	padding-top: 30px;
+}
+
+.entry-content {
+  margin: 20px 0;
+}
+
+.page-header {
+  margin-top: 0;
+  padding: 0;
+  border: none;
+}
 
 article {
 	background: #ffffff;
+}
+
+article.post, article.page, article.attachment {
+  margin-bottom: 25px;
+  padding: 0 0px 25px;
+  border-bottom: 8px solid #e3ebed;
 }
 
 .entry-header {
@@ -261,6 +439,12 @@ article {
 
 .postformats {
 	float: right;
+}
+
+.postformats .glyphicon {
+	color: #ccc;
+	margin-top: 5px;
+	margin-left: 15px;
 }
 
 blockquote {
@@ -308,7 +492,7 @@ blockquote cite:before {
 	padding-bottom: 0;
 }
 
-/*==================================== TAXONOMY ========================================================*/
+/* TAXONOMY ========================================================*/
 
 .entry-title {
 	margin-top: 0;
@@ -330,7 +514,7 @@ article.post p, article.page p {
 	line-height: 1.5em;
 }
 
-/*==================================== IMAGES ==========================================================*/
+/* IMAGES ==========================================================*/
 
 .alignnone {
 	display: block;
@@ -434,7 +618,7 @@ img.size-full {
 	float: right;
 }
 
-/*==================================== META ============================================================*/
+/* META ============================================================*/
 
 .entry-meta {
 	color: #999999;
@@ -471,7 +655,7 @@ footer.entry-meta {
 	float: right;
 }
 
-/*==================================== COMMENTS ========================================================*/
+/* COMMENTS ========================================================*/
 
 .comments-area {
 	margin-bottom: 15px;
@@ -583,9 +767,13 @@ ol.commentlist li.odd {
 	float: left;
 }
 
-/********************************************************************************************************************/
-/******************************************** SIDEBAR & WIDGETS *****************************************************/
-/********************************************************************************************************************/
+/*****************************/
+/* SIDEBAR & WIDGETS *********/
+/*****************************/
+
+#widgets_section_section.container-full-width {
+	background: rgba(0, 82, 94, 0.35);
+}
 
 .widget-container {
 	margin-bottom: 15px;
@@ -594,11 +782,16 @@ ol.commentlist li.odd {
 }
 
 h3.widget-title {
-	font-size: 1.4em;
-	font-weight: 400;
-	margin-top: 0;
-	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-bottom: 6px;
+	border-bottom: 5px solid #e2eaed;
+	color: #4d858e;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-size: 1.1em;
 	line-height: 1em;
+	line-height: 1.3em;
 }
 
 .widget-container ul, .widget ul {
@@ -640,15 +833,20 @@ table#wp-calendar td {
 	width: 100%;
 }
 
-/*==================================== SEARCH FORM ====================================================*/
+/* SEARCH FORM ====================================================*/
 
 #searchform {
 	margin-bottom: 5px;
 }
 
-/********************************************************************************************************************/
-/******************************************** FOOTER ****************************************************************/
-/********************************************************************************************************************/
+/*****************************/
+/* FOOTER ********************/
+/*****************************/
+
+#footer_section.container-full-width {
+	border-top: 8px solid #0a5964;
+	background: rgba(10, 88, 99, 0.8);
+}
 
 #footer-widgets {
 	margin-bottom: 20px;
@@ -658,8 +856,41 @@ table#wp-calendar td {
 	border: none;
 }
 
+#footer-widgets aside,
+#footer-widgets aside a {
+	color: #eee;
+	text-shadow: 1px 1px #00515d;
+}
+
+#footer-widgets aside h3.widget-title {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 4px solid #00525d;
+	color: #fff;
+	text-shadow: 1px 1px 1px #003942;
+}
+
 #footer-widget-container {
 	background: #ffffff;
+}
+
+#footer-widgets .widget-container.widget_text {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-bottom: none;
+	background: none;
+}
+
+#footer-widgets .widget-container.widget_text h3.widget-title {
+	color: #fff;
+}
+
+.site-footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .site-footer #copyright {
@@ -667,9 +898,49 @@ table#wp-calendar td {
 	margin-bottom: 20px;
 }
 
-/********************************************************************************************************************/
-/******************************************** WORDPRESS DEFAULTS ****************************************************/
-/********************************************************************************************************************/
+#after_footer.container-full-width, #footer_menu {
+	background-color: #e2eaed;
+}
+
+/* FOOTER MENU ================================================= */
+
+/*#footer_menu {
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+#footer_menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+#footer_menu li {
+  display: inline;
+  margin-right: 5px;
+}
+
+#footer_menu li a {
+  text-decoration: none;
+}
+
+#footer_menu li a::after {
+  margin-left: 5px;
+  content: ' | ';
+}
+
+#footer_menu li a:hover::after {
+  color: #0088cc;
+}
+
+#footer_menu li:last-child a::after {
+  content: '';
+}*/
+
+/*****************************/
+/* WORDPRESS DEFAULTS ********/
+/*****************************/
 
 .sticky {
 }
@@ -680,11 +951,25 @@ table#wp-calendar td {
 .bypostauthor {
 }
 
-/********************************************************************************************************************/
-/******************************************** ELEMENTS **************************************************************/
-/********************************************************************************************************************/
+/*****************************/
+/* ELEMENTS ******************/
+/*****************************/
 
-/*==================================== CALLOUT ====================================================*/
+/* SLIDER =====================================================*/
+
+#page_slider_section.container-full-width {
+	background: rgba(0, 82, 94, 0.75);
+}
+
+#slider.carousel.slide {
+	margin: 40px 0;
+}
+
+#slider .carousel-control {
+  line-height: 30px;
+}
+
+/* CALLOUT ====================================================*/
 
 #callout-container {
 	margin-bottom: 20px;
@@ -692,22 +977,48 @@ table#wp-calendar td {
 
 #callout {
 	padding: 20px;
+	background: #ffffff;
 }
 
 .callout-text h2.callout-title {
-	font-size: 1.6em;
+	margin-top: 0;
+	font-size: 1.9em;
+	line-height: 1em;
 }
 
 .callout-text p {
 	font-size: 1.2em;
+	line-height: 1.4em;
 }
 
 #callout_button a {
-	margin-top: 5px;
 	float: right;
+	margin-top: 5px;
+	border: 1px solid #457785;
 }
 
-/*==================================== WIDGET BOXES ===============================================*/
+#callout_button .btn-large {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+#callout_button .btn-primary {
+	background: #407c86;
+	color: #fff;
+}
+
+#callout_button .btn-primary:hover {
+	background: #00515d;
+	color: #ffffff;
+	text-shadow: none;
+}
+
+/* WIDGET BOXES ===============================================*/
+
+#boxes_section.container-full-width {
+	background: rgba(0, 82, 94, 0.6);
+}
 
 .box {
 	padding: 20px;
@@ -716,28 +1027,43 @@ table#wp-calendar td {
 }
 
 h2.box-widget-title {
-	font-size: 1.4em;
+	margin-top: 20px;
+	color: #fff;
 	text-align: center;
+	text-shadow: 1px 1px 2px #2d595f;
+	font-size: 1.8em;
+	line-height: 1em;
 }
 
 .box p {
+	color: #fff;
+	text-shadow: 1px 1px 1px #104249;
 	font-size: 1.1em;
-	line-height: 1.2em;
+	line-height: 1.4em;
 }
 
-/*==================================== BOXES ======================================================*/
+/* BOXES ======================================================*/
 
-.box a {
-	display: block;
-	width: 100%;
-	text-align: center;
+#boxes_container .box a {
+  display: block;
+  width: 100%;
+  color: #555555;
+  text-align: center;
 }
 
 .box-no-url {
 	cursor: default;
 }
 
-/*==================================== CAROUSEL ===================================================*/
+/* CAROUSEL ===================================================*/
+
+#cc-carousel_section_section.container-full-width {
+	background: rgba(0, 82, 94, 0.1);
+}
+
+#cc-carousel.es-carousel-wrapper {
+  margin-bottom: 0px;
+}
 
 #cc-carousel {
 	padding: 10px 50px;
@@ -800,20 +1126,36 @@ h2.box-widget-title {
 	}
 }
 
-/*==================================== PORTFOLIO ===================================================*/
+/* PORTFOLIO ===================================================*/
+
+#portfolio_pro_section.container-full-width {
+	background: rgba(0, 82, 94, 0.2);
+}
 
 #portfolio {
-	margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a .portfolio-caption {
+	padding-top: 10px;
 }
 
 #gallery {
-	background: #ffffff;
-	padding: 20px 20px 0 20px;
+  padding: 0px;
+  background: transparent;
 }
 
 #gallery ul.row-fluid {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#gallery h2 {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 1.6em;
+  line-height: 1em;
 }
 
 #gallery ul.row-fluid li#portfolio_wrap {
@@ -825,15 +1167,17 @@ h2.box-widget-title {
 	padding: 20px;
 }
 
-/*==================================== SLIDER ======================================================*/
+/* SLIDER =====================================================*/
 
 #slider {
 }
 
-/*==================================== TWITTER =====================================================*/
+/* TWITTER =====================================================*/
 
 #twitter-container {
-	margin-bottom: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-top: 3px solid #e2eaed;
 }
 
 #twitter-bar {
@@ -862,7 +1206,7 @@ h2.box-widget-title {
 	}
 }
 
-/*==================================== BREADCRUMBS =================================================*/
+/* BREADCRUMBS =================================================*/
 
 .breadcrumbs {
 	margin-bottom: 20px;
@@ -870,17 +1214,69 @@ h2.box-widget-title {
 	font-size: 1.1em;
 }
 
-/*==================================== PAGINATION ==================================================*/
+/* PAGINATION ==================================================*/
 
-.pagination ul li a {
-	background: #ffffff;
+#pagination.container-full-width {
+	background: #fff;
 }
 
-/********************************************************************************************************************/
-/****************************************** MEDIA QUERIES ***********************************************************/
-/********************************************************************************************************************/
+.pagination ul li a {
+	margin-left: 1px;
+	padding-bottom: 3px;
+	border: none;
+	background: #3c7982;
+	color: #fff;
+}
 
-/*==================================== PHONES ====================================================*/
+.pagination ul > li:first-child > a {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.pagination ul > li:last-child > a {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.pagination ul li span.dots,
+.pagination ul li a.next,
+.pagination ul li a.prev {
+	margin-top: 1px;
+	margin-right: 1px;
+	margin-left: 1px;
+	padding-bottom: 3px;
+	border: none;
+	background: rgba(60, 121, 130, 0.84);
+	color: #eee;
+}
+
+.pagination ul li a,
+.pagination ul > li:first-child > a,
+.pagination ul li span.dots,
+.pagination ul li a.next,
+.pagination ul li a.prev {
+	border-bottom: 3px solid #0a5864; 
+}
+	
+.pagination ul > li.active a {
+	border-bottom: 3px solid #5b8d95;
+	background: #ccdbdf;
+	color: #0a5864;
+}
+
+.pagination ul li a:hover {
+	border-bottom-color: #073d46;
+	background-color: #0a5763;
+	color: #ffffff;
+}
+
+/*****************************/
+/* MEDIA QUERIES *************/
+/*****************************/
+
+/* PHONES ===================*/
 
 @media (max-width: 480px) {
 	header#cc-header .span7 {
