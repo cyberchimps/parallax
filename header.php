@@ -52,27 +52,12 @@
 
 <body <?php body_class(); ?>>
 
-<!-- ---------------- Header --------------------- -->
-<div class="container-full-width" id="header_section">
-	<div class="container">
-		<?php do_action( 'cyberchimps_before_wrapper' ); ?>
-		<div class="container-fluid">
-			<?php do_action( 'cyberchimps_header' ); ?>
-		</div>
-		<!-- .container-fluid-->
-	</div>
-	<!-- .container -->
-</div>
-<!-- #header_section -->
-
-<?php do_action( 'cyberchimps_before_navigation' ); ?>
-
 <!-- ---------------- Menu --------------------- -->
 <div class="container-full-width" id="navigation_menu">
 	<div class="container">
 		<div class="container-fluid">
 			<nav id="navigation" class="row-fluid" role="navigation">
-				<div class="main-navigation navbar navbar-inverse">
+				<div class="main-navigation navbar">
 					<div class="navbar-inner">
 						<div class="container">
 
@@ -117,3 +102,18 @@
 <!-- #navigation_menu -->
 
 <?php do_action( 'cyberchimps_after_navigation' ); ?>
+
+<!-- ---------------- Header --------------------- -->
+<div class="container-full-width" id="header_section">
+	<div class="container">
+		<?php do_action( 'cyberchimps_before_wrapper' ); ?>
+		<div class="container-fluid">
+			<?php do_action( 'cyberchimps_header' ); ?>
+		</div>
+		<!-- .container-fluid-->
+	</div>
+	<!-- .container -->
+</div>
+<!-- #header_section -->
+
+<?php do_action( 'cyberchimps_before_navigation' ); ?>
