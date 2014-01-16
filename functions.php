@@ -248,6 +248,8 @@ function cyberchimps_typography_faces( $faces ) {
 		'Wingdings, Zapf Dingbats'                         => 'Wingdings',
 		'MS Sans Serif, Geneva, sans-serif'                => 'MS Sans Serif',
 		'MS Serif, New York, serif'                        => 'MS Serif',
+		'Arimo, Arial, sans-serif'          			=> 'Arimo',
+		'OperatorLightRegular, Arial, sans-serif' 		=> 'OperatorLightRegular',
 	);
 
 	return $faces;
@@ -255,13 +257,38 @@ function cyberchimps_typography_faces( $faces ) {
 
 function cyberchimps_typography_styles( $styles ) {
 	$styles = array( 'normal' => 'Normal', 'bold' => 'Bold' );
-
 	return $styles;
 }
+
+// ADDED
+
+function cyberchimps_typography_defaults() {
+    $default = array(
+        'size'  => '14px',
+        'face'  => 'Arimo, Arial, sans-serif',
+        'style' => 'normal',
+        'color' => '#555555'
+    );
+    return $default;
+}
+
+function cyberchimps_typography_heading_defaults() {
+    $default = array(
+        'size'  => '',
+        'face'  => 'OperatorLightRegular, Helvetica, Arial, sans-serif',
+        'style' => '',
+        'color' => '',
+    );
+    return $default;
+}
+
+// END
 
 add_filter( 'cyberchimps_typography_sizes', 'cyberchimps_typography_sizes' );
 add_filter( 'cyberchimps_typography_faces', 'cyberchimps_typography_faces' );
 add_filter( 'cyberchimps_typography_styles', 'cyberchimps_typography_styles' );
+add_filter( 'cyberchimps_typography_defaults', 'cyberchimps_typography_defaults' );
+add_filter( 'cyberchimps_typography_heading_defaults', 'cyberchimps_typography_heading_defaults' );
 
 // Default for twitter bar handle
 function cyberchimps_twitter_handle_filter() {
