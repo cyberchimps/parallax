@@ -19,7 +19,7 @@
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 
 // Set the content width based on the theme's design and stylesheet.
-if( !isset( $content_width ) ) {
+if ( !isset( $content_width ) ) {
 	$content_width = 640;
 } /* pixels */
 
@@ -39,13 +39,13 @@ function cyberchimps_parallax_script_setup() {
 
 add_action( 'wp_enqueue_scripts', 'cyberchimps_parallax_script_setup' );
 
-if( !function_exists( 'cyberchimps_comment' ) ) :
+if ( !function_exists( 'cyberchimps_comment' ) ) :
 
 // Template for comments and pingbacks.
 // Used as a callback by wp_list_comments() for displaying the comments.
 	function cyberchimps_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
-		switch( $comment->comment_type ) :
+		switch ( $comment->comment_type ) :
 			case 'pingback' :
 			case 'trackback' :
 				?>
@@ -63,7 +63,7 @@ if( !function_exists( 'cyberchimps_comment' ) ) :
 								<?php printf( '%s <span class="says">' . __( 'says:', 'cyberchimps' ) . '</span>', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 							</div>
 							<!-- .comment-author .vcard -->
-							<?php if( $comment->comment_approved == '0' ) : ?>
+							<?php if ( $comment->comment_approved == '0' ) : ?>
 								<em><?php _e( 'Your comment is awaiting moderation.', 'cyberchimps' ); ?></em>
 								<br/>
 							<?php endif; ?>
@@ -98,7 +98,7 @@ endif; // ends check for cyberchimps_comment()
 
 // set up next and previous post links for lite themes only
 function cyberchimps_next_previous_posts() {
-	if( get_next_posts_link() || get_previous_posts_link() ): ?>
+	if ( get_next_posts_link() || get_previous_posts_link() ): ?>
 		<div class="more-content">
 			<div class="row-fluid">
 				<div class="span6 previous-post">
@@ -125,21 +125,21 @@ function cyberchimps_theme_check() {
 
 //Theme Name
 function cyberchimps_options_theme_name() {
-	$text = 'CyberChimps';
+	$text = 'Parallax';
 
 	return $text;
 }
 
 //Theme Pro Name
 function cyberchimps_upgrade_bar_pro_title() {
-	$text = 'CyberChimps Pro';
+	$text = 'a CyberChimps Pro Theme';
 
 	return $text;
 }
 
 //Upgrade link
 function cyberchimps_upgrade_bar_pro_link() {
-	$url = 'http://cyberchimps.com/store/cyberchimpspro/';
+	$url = 'http://cyberchimps.com/store/';
 
 	return $url;
 }
@@ -153,7 +153,7 @@ function cyberchimps_options_documentation_url() {
 
 // Support Forum URL
 function cyberchimps_options_support_forum() {
-	$url = 'http://cyberchimps.com/forum/free/cyberchimps/';
+	$url = 'http://cyberchimps.com/forum/free/parallax/';
 
 	return $url;
 }
@@ -239,6 +239,7 @@ function cyberchimps_typography_faces( $faces ) {
 		'Lucida Console, Monaco, monospace'                => 'Lucida Console',
 		'Lucida Sans Unicode, Lucida Grande, sans-serif'   => 'Lucida Sans Unicode',
 		'Palatino Linotype, Book Antiqua, Palatino, serif' => 'Palatino Linotype',
+		'"Playfair Display", serif'                        => 'Playfair Display',
 		'Tahoma, Geneva, sans-serif'                       => 'Tahoma',
 		'Times New Roman, Times, serif'                    => 'Times New Roman',
 		'Trebuchet MS, sans-serif'                         => 'Trebuchet MS',
@@ -248,8 +249,8 @@ function cyberchimps_typography_faces( $faces ) {
 		'Wingdings, Zapf Dingbats'                         => 'Wingdings',
 		'MS Sans Serif, Geneva, sans-serif'                => 'MS Sans Serif',
 		'MS Serif, New York, serif'                        => 'MS Serif',
-		'Arimo, Arial, sans-serif'          			=> 'Arimo',
-		'OperatorLightRegular, Arial, sans-serif' 		=> 'OperatorLightRegular',
+		'Arimo, Arial, sans-serif'                         => 'Arimo',
+		'OperatorLightRegular, Arial, sans-serif'          => 'OperatorLightRegular',
 	);
 
 	return $faces;
@@ -257,32 +258,28 @@ function cyberchimps_typography_faces( $faces ) {
 
 function cyberchimps_typography_styles( $styles ) {
 	$styles = array( 'normal' => 'Normal', 'bold' => 'Bold' );
+
 	return $styles;
 }
 
-// ADDED
-
 function cyberchimps_typography_defaults() {
-    $default = array(
-        'size'  => '14px',
-        'face'  => 'Arimo, Arial, sans-serif',
-        'style' => 'normal',
-        'color' => '#555555'
-    );
-    return $default;
+	$default = array(
+		'size'  => '14px',
+		'face'  => 'Arimo, Arial, sans-serif',
+		'style' => 'normal',
+		'color' => '#555555'
+	);
+
+	return $default;
 }
 
 function cyberchimps_typography_heading_defaults() {
-    $default = array(
-        'size'  => '',
-        'face'  => 'OperatorLightRegular, Helvetica, Arial, sans-serif',
-        'style' => '',
-        'color' => '',
-    );
-    return $default;
-}
+	$default = array(
+		'face'  => '"Playfair Display", serif',
+	);
 
-// END
+	return $default;
+}
 
 add_filter( 'cyberchimps_typography_sizes', 'cyberchimps_typography_sizes' );
 add_filter( 'cyberchimps_typography_faces', 'cyberchimps_typography_faces' );
@@ -290,10 +287,22 @@ add_filter( 'cyberchimps_typography_styles', 'cyberchimps_typography_styles' );
 add_filter( 'cyberchimps_typography_defaults', 'cyberchimps_typography_defaults' );
 add_filter( 'cyberchimps_typography_heading_defaults', 'cyberchimps_typography_heading_defaults' );
 
+function cyberchimps_blog_draganddrop_defaults() {
+	$options = array(
+		'slider_lite'    => __( 'Slider Lite', 'cyberchimps_core' ),
+		'boxes_lite'     => __( 'Boxes', 'cyberchimps_core' ),
+		'portfolio_lite' => __( 'Portfolio Lite', 'cyberchimps_core' ),
+		'blog_post_page' => __( 'Post Page', 'cyberchimps_core' ),
+	);
+
+	return $options;
+}
+
+add_filter( 'cyberchimps_elements_draganddrop_defaults', 'cyberchimps_blog_draganddrop_defaults' );
+
 // Default for twitter bar handle
 function cyberchimps_twitter_handle_filter() {
 	return 'WordPress';
 }
 
 add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_filter' );
-?>

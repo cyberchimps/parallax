@@ -9,23 +9,18 @@ Tags: white, black, silver, light, two-columns, right-sidebar, fixed-width, flex
 License: GNU General Public License version 3
 License URI: http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
 */
-
 /********************************************************************************************************************/
 /******************************************** MAIN HTML STYLES ******************************************************/
 /********************************************************************************************************************/
-
 @import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,900italic);
 
 @font-face {
-    font-family: 'OperatorLightRegular';
-    src: url('inc/fonts/operator-light-webfont.eot');
-    src: url('inc/fonts/operator-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('inc/fonts/operator-light-webfont.woff') format('woff'),
-         url('inc/fonts/operator-light-webfont.ttf') format('truetype'),
-         url('inc/fonts/operator-light-webfont.svg#OperatorLightRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+	font-family: 'OperatorLightRegular';
+	src: url('inc/fonts/operator-light-webfont.eot');
+	src: url('inc/fonts/operator-light-webfont.eot?#iefix') format('embedded-opentype'), url('inc/fonts/operator-light-webfont.woff') format('woff'), url('inc/fonts/operator-light-webfont.ttf') format('truetype'), url('inc/fonts/operator-light-webfont.svg#OperatorLightRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
@@ -35,31 +30,27 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 15px;
 	color: #c80a00;
-	font-weight: 400;
 	letter-spacing: 1px;
+	font-weight: 400;
+	font-style: italic;
 }
 
 a {
 	margin: 1px;
 	color: #c80a00;
 	text-decoration: none;
-	-webkit-transition: all .3s;
-	-moz-transition: all .3s;
-	-ms-transition: all .3s;
-	-o-transition: all .3s;
-	transition: all .3s;
 }
 
 a:hover {
-	color: #333;
-	text-decoration: underline; 
+	color: #333333;
+	text-decoration: underline;
 }
 
 table .label {
-	background: none;
 	padding: 7px;
-	line-height: normal;
+	background: none;
 	text-shadow: none;
+	line-height: normal;
 }
 
 tr {
@@ -71,10 +62,10 @@ td {
 }
 
 dt {
-	font-weight: bold;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 26px;
+	font-weight: bold;
 }
 
 dd {
@@ -87,8 +78,8 @@ ul, ol {
 }
 
 ol, ul {
-	list-style-position: inside;
 	margin-left: 21px;
+	list-style-position: inside;
 }
 
 pre {
@@ -129,7 +120,7 @@ header #social .icons a {
 }
 
 .icons {
-  margin-top: 15px;
+	margin-top: 15px;
 }
 
 /* DETAILS =============================================*/
@@ -143,13 +134,18 @@ header#cc-header h2.site-title {
 	margin-top: 25px;
 	margin-bottom: 15px;
 	text-shadow: 6px 0 1px #d5d5d3;
+	font-style: italic;
 	font-size: 82px;
-	letter-spacing: 5px;
+	font-family: 'Playfair Display', serif;
+}
+
+header#cc-header h2.site-title a {
+	text-decoration: none;
 }
 
 header#cc-header h2.site-description {
-	font-size: 14px;
 	margin: 0;
+	font-size: 14px;
 }
 
 header#cc-header .contact_details {
@@ -183,13 +179,14 @@ header #search #searchform {
 }
 
 #navigation_menu {
-	background: #000000;
 	position: fixed;
 	top: 0;
 	z-index: 99999;
+	background: #000000;
 }
+
 #navigation {
-	
+
 }
 
 .main-navigation.navbar {
@@ -198,30 +195,39 @@ header #search #searchform {
 
 .main-navigation .navbar-inner {
 	padding: 5px 0;
+	border: none;
 	-webkit-border-radius: 1px;
 	border-radius: 1px;
 	background-color: transparent;
 	background-image: none;
 	filter: none;
-	border: none;
 }
 
 .main-navigation .nav > li > a {
 	padding-right: 20px;
 	padding-left: 20px;
-	color: #fff;
+	color: #ffffff;
 	text-transform: uppercase;
 	text-shadow: 1px 1px #003d46;
 }
 
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+	border-top-color: #ffffff;
+	border-bottom-color: #ffffff;
+}
+
 .main-navigation .nav > li > a:hover {
-	background: #363636;
-	color: #fff;
+	color: #2c828f;
+}
+
+.navbar .nav li.dropdown > a:hover .caret {
+	border-top-color: #2c828f;
+	border-bottom-color: #2c828f;
 }
 
 .main-navigation .nav li ul li ul {
-	list-style: none;
 	margin-left: 0;
+	list-style: none;
 }
 
 .main-navigation .nav li ul li ul li a {
@@ -238,13 +244,13 @@ header #search #searchform {
 }
 
 .main-navigation .nav li ul li a:hover {
-	color: #0088cc;
 	background: none;
+	color: #2c828f;
 }
 
 .main-navigation .nav li ul.dropdown-menu .active > a {
 	background: none;
-	background-color: #00525E;
+	background-color: #00525e;
 }
 
 .main-navigation .nav li ul.dropdown-menu .active > a:hover {
@@ -295,6 +301,8 @@ header #search #searchform {
 }
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+	background-color: transparent;
+	color: #2c828f;
 	text-shadow: none;
 }
 
@@ -321,15 +329,14 @@ header #search #searchform {
 	color: #ffffff;
 }
 
-.navbar .current-menu-ancestor.dropdown >a {
-  color: #ffffff;
+.navbar .current-menu-ancestor.dropdown > a {
+	color: #ffffff;
 }
 
 .navbar .nav li.current-menu-ancestor.dropdown > .dropdown-toggle .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+	border-top-color: #ffffff;
+	border-bottom-color: #ffffff;
 }
-
 
 /*SARAH END*/
 
@@ -351,17 +358,17 @@ header #search #searchform {
 	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
 		font-weight: normal;
 	}
-	
+
 	.navbar .nav-collapse .nav > li > a {
-		color: #fff;
+		color: #ffffff;
 	}
 
-	.navbar-inverse .nav-collapse .nav > li > a:hover, 
+	.navbar-inverse .nav-collapse .nav > li > a:hover,
 	.navbar-inverse .nav-collapse .dropdown-menu a:hover {
 		color: #ffffff;
 	}
 
-	.navbar-inverse .nav-collapse .nav > li.current-menu-item > a, 
+	.navbar-inverse .nav-collapse .nav > li.current-menu-item > a,
 	.navbar-inverse .nav-collapse .nav > li.current-menu-ancestor > a {
 		color: #ffffff;
 	}
@@ -375,9 +382,9 @@ header #search #searchform {
 	}
 
 	.navbar-inverse .nav-collapse .dropdown-menu .active > a {
-		color: #ffffff;
-		background-image: none;
 		background-color: #000000;
+		background-image: none;
+		color: #ffffff;
 	}
 }
 
@@ -405,10 +412,10 @@ article.post, article.page, article.attachment {
 }
 
 .featured-image {
+	float: left;
 	margin-top: 4px;
 	margin-right: 12px;
 	margin-bottom: 10px;
-	float: left;
 }
 
 /* POST AND PAGE CONTENT ===========================================*/
@@ -416,7 +423,7 @@ article.post, article.page, article.attachment {
 #page_section_section.container-full-width,
 #single_page.container-full-width,
 #archive_page.container-full-width {
-	background: #fff;
+	background: #ffffff;
 }
 
 #single_page.container-full-width,
@@ -434,14 +441,14 @@ article.post, article.page, article.attachment {
 }
 
 .entry-content {
-  margin: 20px 0;
-  
+	margin: 20px 0;
+
 }
 
 .page-header {
-  margin-top: 0;
-  padding: 0;
-  border: none;
+	margin-top: 0;
+	padding: 0;
+	border: none;
 }
 
 article {
@@ -450,9 +457,9 @@ article {
 }
 
 article.post, article.page, article.attachment {
-  margin-bottom: 25px;
-  padding: 25px;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+	margin-bottom: 25px;
+	padding: 25px;
+	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
 }
 
 .entry-header {
@@ -468,15 +475,15 @@ article.post, article.page, article.attachment {
 }
 
 .postformats .glyphicon {
-	color: #ccc;
 	margin-top: 5px;
 	margin-left: 15px;
+	color: #cccccc;
 }
 
 blockquote {
-	background-color: #cccccc;
 	margin: 20px 10px;
 	padding: 3px;
+	background-color: #cccccc;
 }
 
 blockquote p {
@@ -488,10 +495,10 @@ blockquote cite {
 }
 
 blockquote cite:before {
-	content: ' ̶ ';
 	position: relative;
 	top: -2px;
 	margin: 0 5px;
+	content: ' ̶ ';
 }
 
 .page-links {
@@ -505,17 +512,17 @@ blockquote cite:before {
 }
 
 .previous-post {
-	text-align: left;
 	margin-top: 5px;
 	margin-bottom: 0;
 	padding-bottom: 0;
+	text-align: left;
 }
 
 .next-post {
-	text-align: right;
 	margin-top: 5px;
 	margin-bottom: 0;
 	padding-bottom: 0;
+	text-align: right;
 }
 
 /* TAXONOMY ========================================================*/
@@ -523,8 +530,8 @@ blockquote cite:before {
 .entry-title {
 	margin-top: 0;
 	margin-bottom: 5px;
-	line-height: 1em;
 	font-size: 2.6em;
+	line-height: 1em;
 }
 
 .entry-title a {
@@ -583,8 +590,8 @@ a img.alignleft {
 
 a img.aligncenter {
 	display: block;
-	margin-left: auto;
-	margin-right: auto
+	margin-right: auto;
+	margin-left: auto
 }
 
 img.size-full {
@@ -593,10 +600,10 @@ img.size-full {
 }
 
 .wp-caption {
-	background: #ffffff;
-	border: 1px solid #f0f0f0;
-	max-width: 96%; /* Image does not overflow the content area */
 	padding: 15px 3px 10px;
+	max-width: 96%;
+	border: 1px solid #f0f0f0; /* Image does not overflow the content area */
+	background: #ffffff;
 	text-align: center;
 }
 
@@ -613,19 +620,19 @@ img.size-full {
 }
 
 .wp-caption img {
-	border: 0 none;
-	height: auto;
 	margin: 0;
-	max-width: 95%;
 	padding: 0;
+	max-width: 95%;
 	width: auto;
+	height: auto;
+	border: 0 none;
 }
 
 .wp-caption p.wp-caption-text {
-	font-size: 11px;
-	line-height: 17px;
 	margin: 0;
 	padding: 0 4px 5px;
+	font-size: 11px;
+	line-height: 17px;
 }
 
 .caption_title {
@@ -647,8 +654,8 @@ img.size-full {
 /* META ============================================================*/
 
 .entry-meta {
-	color: #999999;
 	margin-top: 0;
+	color: #999999;
 	font-size: 0.85em;
 }
 
@@ -661,11 +668,11 @@ footer.entry-meta {
 }
 
 .edit-link a {
-	color: #ffffff;
-	background: #888888;
 	padding: 2px 4px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
+	background: #888888;
+	color: #ffffff;
 }
 
 .edit-link a:visited {
@@ -673,8 +680,8 @@ footer.entry-meta {
 }
 
 .edit-link a:hover {
-	text-decoration: none;
 	color: #cccccc;
+	text-decoration: none;
 }
 
 .cyberchimps_article_share {
@@ -702,8 +709,8 @@ ol.commentlist {
 }
 
 ol.commentlist p {
-	margin-left: 8px;
 	clear: left;
+	margin-left: 8px;
 }
 
 ol.commentlist li.comment {
@@ -727,8 +734,8 @@ ol.commentlist li.comment div.comment-meta a {
 }
 
 ol.commentlist li.comment div.reply {
-	font-size: 11px;
 	margin-left: 8px;
+	font-size: 11px;
 }
 
 ol.commentlist li.comment div.reply a {
@@ -736,8 +743,8 @@ ol.commentlist li.comment div.reply a {
 }
 
 ol.commentlist li.comment ul.children {
-	list-style: none;
 	margin: 10px 0 0;
+	list-style: none;
 }
 
 ol.commentlist li.comment ul.children li.depth-2 {
@@ -753,22 +760,22 @@ ol.commentlist li.comment ul.children li.depth-4 {
 }
 
 ol.commentlist li.even {
-	background: #fafafa;
 	border: 1px solid #cccccc;
-	border-radius: 4px;
 	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #fafafa;
 }
 
 ol.commentlist li.odd {
-	background: #ffffff;
 	border: 1px solid #cccccc;
-	border-radius: 4px;
 	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #ffffff;
 }
 
 .comment, .trackback, .pingback {
-	padding: 10px;
 	margin: 10px 0 10px 0;
+	padding: 10px;
 }
 
 .odd {
@@ -780,8 +787,8 @@ ol.commentlist li.odd {
 }
 
 #respond input, #respond textarea {
-	margin: 0 5px 5px 0;
 	overflow: auto;
+	margin: 0 5px 5px 0;
 }
 
 #respond textarea {
@@ -825,9 +832,9 @@ h3.widget-title {
 }
 
 .widget-container ul li, .widget ul li {
+	list-style: none;
 	font-size: 14px;
 	line-height: 1.8em;
-	list-style: none;
 }
 
 table#wp-calendar {
@@ -839,10 +846,10 @@ table#wp-calendar th {
 }
 
 table#wp-calendar td {
-	font-size: 14px;
-	width: 14.28571428571429%;
 	padding: 5px 0;
+	width: 14.28571428571429%;
 	text-align: center;
+	font-size: 14px;
 }
 
 table#wp-calendar td {
@@ -854,8 +861,8 @@ table#wp-calendar td {
 }
 
 .widget-container #searchform input.input-medium {
-	float: none;
 	display: inline-block;
+	float: none;
 	width: 100%;
 }
 
@@ -879,11 +886,12 @@ table#wp-calendar td {
 
 #footer-widgets .widget-container {
 	border: none;
+	background-color: transparent;
 }
 
 #footer-widgets aside,
 #footer-widgets aside a {
-	color: #444;
+	color: #444444;
 }
 
 #footer-widgets aside h3.widget-title {
@@ -891,7 +899,7 @@ table#wp-calendar td {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: 4px solid #00525d;
-	color: #333;
+	color: #333333;
 	font-size: 1.7em;
 }
 
@@ -918,8 +926,8 @@ table#wp-calendar td {
 }
 
 .site-footer #copyright {
-	text-align: right;
 	margin-bottom: 20px;
+	text-align: right;
 }
 
 #after_footer.container-full-width, #footer_menu {
@@ -1029,7 +1037,7 @@ table#wp-calendar td {
 
 #callout_button .btn-primary {
 	background: #407c86;
-	color: #fff;
+	color: #ffffff;
 }
 
 #callout_button .btn-primary:hover {
@@ -1042,30 +1050,29 @@ table#wp-calendar td {
 
 #boxes_lite_section.container-full-width {
 	padding: 60px 0 50px 0;
-	background-size: 100%;
 	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+	background-size: 100%;
 }
 
 .box {
-	padding: 20px;
 	margin-bottom: 20px;
-	background: #444;
+	padding: 20px;
 	border: 6px solid rgba(255, 255, 255, 0.1);
+	background: #444444;
 	opacity: 0.9;
 }
 
 .box p {
-	color: #eee;
+	margin-top: 15px;
+	color: #eeeeee;
 	text-shadow: 1px 1px 0 #2a2a2a;
 	font-size: 1.0em;
 	line-height: 1.4em;
-	margin-top: 15px;
 }
 
 .box img {
 	margin-top: 10px;
 }
-
 
 /*h2.box-widget-title {
 	margin-top: 20px;
@@ -1076,14 +1083,13 @@ table#wp-calendar td {
 	line-height: 1em;
 }*/
 
-
 /* BOXES ======================================================*/
 
 #boxes_container .box a {
-  display: block;
-  width: 100%;
-  color: #555555;
-  text-align: center;
+	display: block;
+	width: 100%;
+	color: #555555;
+	text-align: center;
 }
 
 .box-no-url {
@@ -1097,7 +1103,7 @@ table#wp-calendar td {
 }
 
 #cc-carousel.es-carousel-wrapper {
-  margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 #cc-carousel {
@@ -1105,10 +1111,10 @@ table#wp-calendar td {
 }
 
 #cc-carousel ul {
-	max-height: 150px;
-	width: 100%;
 	margin: 0;
 	padding: 0;
+	max-height: 150px;
+	width: 100%;
 }
 
 #cc-carousel ul li {
@@ -1129,11 +1135,11 @@ table#wp-calendar td {
 }
 
 #cc-carousel ul li .carousel_caption p {
-	color: #ffffff;
-	font-size: 1em;
-	font-weight: normal;
-	text-align: center;
 	margin: 0;
+	color: #ffffff;
+	text-align: center;
+	font-weight: normal;
+	font-size: 1em;
 }
 
 #cc-carousel .carousel-control {
@@ -1152,8 +1158,8 @@ table#wp-calendar td {
 @media (max-width: 767px) {
 	#cc-carousel [class*="span"], .row-fluid #cc-carousel [class*="span"] {
 		float: left;
-		width: 14.364640883%;
 		margin-left: 2.762430939%;
+		width: 14.364640883%;
 	}
 
 	#cc-carousel [class*="span"]:first-child, .row-fluid #cc-carousel [class*="span"]:first-child {
@@ -1164,24 +1170,23 @@ table#wp-calendar td {
 /* PORTFOLIO ===================================================*/
 
 #portfolio_lite_section.container-full-width {
+	padding-top: 60px;
+	padding-bottom: 40px;
 	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
 	background-size: 100%;
 }
 
 #portfolio {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 #portfolio h2.entry-title {
-	background: rgba(51, 51, 51, 0.55);
+	margin-right: 2px;
+	margin-bottom: 10px;
+	margin-left: 2px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
-	text-shadow: 2px 0 1px #060606;
-	margin-bottom: 10px;
-	margin-right: 2px;
-	margin-left: 2px;
+	background: rgba(51, 51, 51, 0.55);
 }
 
 a .portfolio-caption {
@@ -1189,25 +1194,25 @@ a .portfolio-caption {
 }
 
 #gallery {
-  padding: 0px;
-  background: transparent;
+	padding: 0px;
+	background: transparent;
 }
 
 #gallery ul.row-fluid {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #gallery h2 {
-  margin-top: 0;
-  font-weight: 400;
-  font-size: 1.6em;
-  line-height: 1em;
+	margin-top: 0;
+	font-weight: 400;
+	font-size: 1.6em;
+	line-height: 1em;
 }
 
 #gallery ul.row-fluid li#portfolio_wrap {
-	text-align: center;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 #gallery ul.row-fluid li#portfolio_wrap .portfolio_item {
@@ -1216,20 +1221,20 @@ a .portfolio-caption {
 }
 
 #gallery ul.row-fluid li#portfolio_wrap:hover img {
-	opacity: .9; }
+	opacity: .9;
+}
 
 /* SLIDER =====================================================*/
 
 #slider_lite_section.container-full-width {
 	padding: 60px 0;
-	background-size: 100%;
 	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+	background-size: 100%;
 }
- 
+
 #slider.carousel.slide {
 	margin: 15px 0;
 }
-
 
 /* TWITTER =====================================================*/
 
@@ -1240,8 +1245,8 @@ a .portfolio-caption {
 }
 
 #twitter-bar {
-	background: #ffffff;
 	padding: 20px;
+	background: #ffffff;
 }
 
 #twitter-bar #twitter-text img {
@@ -1255,9 +1260,9 @@ a .portfolio-caption {
 
 @media (max-width: 480px) {
 	#twitter-bar #twitter-text img {
+		margin-top: 0;
 		width: 30px;
 		height: 21px;
-		margin-top: 0;
 	}
 
 	#twitter-bar #twitter-text p {
@@ -1276,7 +1281,7 @@ a .portfolio-caption {
 /* PAGINATION ==================================================*/
 
 #pagination.container-full-width {
-	background: #fff;
+	background: #ffffff;
 }
 
 .pagination ul li a {
@@ -1284,7 +1289,7 @@ a .portfolio-caption {
 	padding-bottom: 3px;
 	border: none;
 	background: #3c7982;
-	color: #fff;
+	color: #ffffff;
 }
 
 .pagination ul > li:first-child > a {
@@ -1308,7 +1313,7 @@ a .portfolio-caption {
 	padding-bottom: 3px;
 	border: none;
 	background: rgba(60, 121, 130, 0.84);
-	color: #eee;
+	color: #eeeeee;
 }
 
 .pagination ul li a,
@@ -1316,9 +1321,9 @@ a .portfolio-caption {
 .pagination ul li span.dots,
 .pagination ul li a.next,
 .pagination ul li a.prev {
-	border-bottom: 3px solid #0a5864; 
+	border-bottom: 3px solid #0a5864;
 }
-	
+
 .pagination ul > li.active a {
 	border-bottom: 3px solid #5b8d95;
 	background: #ccdbdf;
