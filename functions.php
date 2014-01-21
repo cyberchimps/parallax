@@ -34,11 +34,16 @@ add_action( 'cyberchimps_site_info', 'cyberchimps_add_site_info' );
 
 function cyberchimps_parallax_script_setup() {
 
-	wp_enqueue_script( 'blur-js', get_template_directory_uri() . '/inc/js/blur.js', array( 'jquery' ) );
 	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/inc/js/theme.js', array( 'jquery', 'blur-js' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'cyberchimps_parallax_script_setup' );
+
+function cyberchimps_instantiate_class() {
+	CyberChimpsParallax::instance();
+}
+add_action( 'after_setup_theme', 'cyberchimps_instantiate_class' );
+
 
 if ( !function_exists( 'cyberchimps_comment' ) ) :
 
