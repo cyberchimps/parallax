@@ -13,15 +13,15 @@
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
  * @link     http://www.cyberchimps.com/
  */
- 
+
+/**
+ * Makes header clear the static menu bar
+ */
 jQuery(document).ready(function($) {
     var height = $('#navigation_menu').height();
-	var margin = 0;
 
-	if( $(".admin-bar") ) {
-		margin = $("#wpadminbar").height();
-	}
+	// Remove a small discrepancy with the height calculation
+	height = height - 5;
 
-	$('#navigation_menu').css("top", margin + "px");
 	$("#header_section").css("margin-top", height + "px");
 });
