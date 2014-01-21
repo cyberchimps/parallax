@@ -13,6 +13,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or lat
 /******************************************** MAIN HTML STYLES ******************************************************/
 /********************************************************************************************************************/
 @import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,900italic);
 
 @font-face {
@@ -37,9 +38,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 15px;
 	color: #c80a00;
-	letter-spacing: 1px;
 	font-weight: 400;
-	font-style: italic;
 }
 
 a {
@@ -143,9 +142,9 @@ header#cc-header h2.site-title {
 	margin-top: 25px;
 	margin-bottom: 15px;
 	text-shadow: 6px 0 1px #d5d5d3;
-	font-style: italic;
+	/*font-style: italic;*/
 	font-size: 82px;
-	font-family: 'Playfair Display', serif;
+	/*font-family: 'Playfair Display', serif;*/
 }
 
 header#cc-header h2.site-title a {
@@ -485,8 +484,8 @@ article {
 article.post, article.page, article.attachment {
 	margin-bottom: 30px;
 	padding: 25px;
-	border-top: 5px solid rgba(0, 0, 0, 0.3);
-	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+	border-top: 5px solid rgba(0, 0, 0, 0.1);
+	/*border-bottom: 5px solid rgba(0, 0, 0, 0.1);*/
 }
 
 .entry-header {
@@ -840,16 +839,16 @@ ol.commentlist li.odd {
 .widget-container {
 	margin-bottom: 30px;
 	padding: 20px;
-	border-top: 5px solid rgba(0, 0, 0, 0.3);
-	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+	border-top: 5px solid rgba(0, 0, 0, 0.1);
+	/*border-bottom: 5px solid rgba(0, 0, 0, 0.3);*/
 	background: #ffffff;
 }
 
 h3.widget-title {
 	margin-top: 5px;
 	margin-bottom: 6px;
-	border-bottom: 5px solid #e2eaed;
-	color: #4d858e;
+	border-bottom: 5px solid #eeeeee;
+	color: #888;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: normal;
@@ -930,9 +929,9 @@ table#wp-calendar td {
 	margin-bottom: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border-bottom: 4px solid #00525d;
+	border-bottom: 1px solid #ccc;
 	color: #333333;
-	font-size: 1.7em;
+	font-size: 1.1em;
 }
 
 #footer-widget-container {
@@ -977,10 +976,6 @@ table#wp-calendar td {
 	padding: 100px 0;
 	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
 
-}
-
-#slider.carousel.slide {
-	margin: 15px 0;
 }
 
 /* WIDGET BOXES ===============================================*/

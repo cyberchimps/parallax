@@ -256,6 +256,8 @@ function cyberchimps_typography_faces( $faces ) {
 		'MS Sans Serif, Geneva, sans-serif'                => 'MS Sans Serif',
 		'MS Serif, New York, serif'                        => 'MS Serif',
 		'Arimo, Arial, sans-serif'                         => 'Arimo',
+		'"Droid Sans", sans-serif'                         => 'Droid Sans',
+		'Spinnaker, sans-serif'                            => 'Spinnaker',
 		'OperatorLightRegular, Arial, sans-serif'          => 'OperatorLightRegular',
 	);
 
@@ -281,7 +283,7 @@ function cyberchimps_typography_defaults() {
 
 function cyberchimps_typography_heading_defaults() {
 	$default = array(
-		'face'  => '"Playfair Display", serif',
+		'face'  => 'Spinnaker, sans-serif',
 	);
 
 	return $default;
