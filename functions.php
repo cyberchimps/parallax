@@ -245,7 +245,6 @@ function cyberchimps_typography_faces( $faces ) {
 		'Lucida Console, Monaco, monospace'                => 'Lucida Console',
 		'Lucida Sans Unicode, Lucida Grande, sans-serif'   => 'Lucida Sans Unicode',
 		'Palatino Linotype, Book Antiqua, Palatino, serif' => 'Palatino Linotype',
-		'"Playfair Display", serif'                        => 'Playfair Display',
 		'Tahoma, Geneva, sans-serif'                       => 'Tahoma',
 		'Times New Roman, Times, serif'                    => 'Times New Roman',
 		'Trebuchet MS, sans-serif'                         => 'Trebuchet MS',
@@ -256,9 +255,7 @@ function cyberchimps_typography_faces( $faces ) {
 		'MS Sans Serif, Geneva, sans-serif'                => 'MS Sans Serif',
 		'MS Serif, New York, serif'                        => 'MS Serif',
 		'Arimo, Arial, sans-serif'                         => 'Arimo',
-		'"Droid Sans", sans-serif'                         => 'Droid Sans',
 		'Spinnaker, sans-serif'                            => 'Spinnaker',
-		'OperatorLightRegular, Arial, sans-serif'          => 'OperatorLightRegular',
 	);
 
 	return $faces;
