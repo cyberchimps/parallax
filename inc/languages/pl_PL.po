@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Cyberchimps Free\n"
+"Project-Id-Version: Parallax\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 09:13:43 UTC\n"
-"PO-Revision-Date: 2013-07-26 13:08+0530\n"
-"Last-Translator: Web Translate It <support@webtranslateit.com>\n"
+"POT-Creation-Date: 2014-01-22 10:08:48 UTC\n"
+"PO-Revision-Date: 2014-01-22 17:38+0530\n"
+"Last-Translator: Surya <surya@cyberchimps.com>\n"
 "Language-Team: Polish, Poland\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
 
@@ -48,10 +48,10 @@ msgstr "Miesięczne Archiwum: %s"
 msgid "Yearly Archives: %s"
 msgstr "Roczne Archiwum: %s"
 
-#: ../../sidebar-right.php ../../sidebar.php ../../sidebar-left.php
-#: ../../footer.php ../../archive.php
+#: ../../archive.php ../../footer.php ../../sidebar-left.php
+#: ../../sidebar-right.php ../../sidebar.php
 msgid "Archives"
-msgstr "Archiwum"
+msgstr "Archiwa"
 
 #: ../../comments.php
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -72,7 +72,7 @@ msgstr "Nowsze komentarze"
 
 #: ../../comments.php
 msgid "Comments are closed."
-msgstr "Komentarze są zamknięte."
+msgstr "Kanał z komentarzami"
 
 #: ../../content.php
 msgid "Permalink to %s"
@@ -84,11 +84,11 @@ msgstr "Kontynuuj czytanie"
 
 #: ../../content.php ../../image.php
 msgid "Pages:"
-msgstr "Stron:"
+msgstr "Stron"
 
 #: ../../content.php ../../image.php
 msgid "Edit"
-msgstr "Edycja"
+msgstr "Zmień"
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
@@ -108,7 +108,7 @@ msgstr "WordPress"
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
 msgid "http://wordpress.org/"
-msgstr "http://WordPress.org/"
+msgstr "http://pl.wordpress.org/"
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
@@ -124,7 +124,7 @@ msgstr "Pingback:"
 
 #: ../../functions.php
 msgid "(Edit)"
-msgstr "(Edit)"
+msgstr "(Edytuj)"
 
 #: ../../functions.php
 msgid "says:"
@@ -142,6 +142,21 @@ msgstr "%1$ s w %2$ s"
 msgid "CyberChimps Professional Responsive WordPress Theme"
 msgstr "CyberChimps profesjonalny WordPress Theme Responsive"
 
+#: ../../functions.php
+msgid "Slider Lite"
+msgstr "Suwak Lite"
+
+#: ../../functions.php
+msgid "Boxes"
+msgstr "Pola"
+
+msgid "Portfolio Lite"
+msgstr "Portfolio Lite"
+
+#: ../../functions.php
+msgid "Post Page"
+msgstr "Po stronie"
+
 #: ../../image.php
 msgid "Published"
 msgstr "Opublikowane"
@@ -152,15 +167,15 @@ msgstr "rozmiar"
 
 #: ../../image.php
 msgid "in"
-msgstr "w"
+msgstr "z"
 
 #: ../../image.php
 msgid "Previous"
-msgstr "Poprzedni"
+msgstr "wstecz"
 
 #: ../../image.php
 msgid "Next"
-msgstr "Następny"
+msgstr "dalej"
 
 #: ../../image.php
 msgid "Post a comment"
@@ -170,7 +185,6 @@ msgstr "Skomentuj"
 msgid "or leave a trackback"
 msgstr "lub zostawić trackback"
 
-#: ../../image.php
 msgid "Trackback URL"
 msgstr "Trackback URL"
 
@@ -222,11 +236,11 @@ msgstr "Wyniki wyszukiwania dla: %s"
 
 #: ../../searchform.php
 msgid "Search"
-msgstr "Szukaj"
+msgstr "szukaj"
 
 #: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Subscribe"
-msgstr "Zapisz się"
+msgstr "Subskrybuj"
 
 #: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Entries (RSS)"

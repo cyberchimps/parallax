@@ -3,55 +3,55 @@ msgstr ""
 "Project-Id-Version: Parallax\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-22 10:08:48 UTC\n"
-"PO-Revision-Date: 2014-01-22 17:37+0530\n"
+"PO-Revision-Date: 2014-01-22 17:38+0530\n"
 "Last-Translator: Surya <surya@cyberchimps.com>\n"
-"Language-Team: Russian, Russia\n"
+"Language-Team: Slovenian, Slovenia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 
 #: ../../404.php
 msgid "Oops! That page cannot be found."
-msgstr "Упс! Эта страница не найдена."
+msgstr ""
 
 #: ../../404.php
 msgid ""
 "It looks like nothing was found at this location. Maybe try searching for it?"
 msgstr ""
-"Похоже, что ничего не было найдено в этом месте. Может быть, попробовать "
-"искать для него?"
+"Izgleda, da ni bilo nič ugotovljeno na tej lokaciji. Morda poskusite "
+"poiskati?"
 
 #: ../../archive.php
 msgid "Category Archives: %s"
-msgstr "Категория Архивы: %s"
+msgstr "Category Archives: %s"
 
 #: ../../archive.php
 msgid "Tag Archives: %s"
-msgstr "Тег Архивы: %s"
+msgstr "Tag Archives: %s"
 
 #: ../../archive.php
 msgid "Author Archives: %s"
-msgstr "Автор Архивы: %s"
+msgstr "Avtor Archives: %s"
 
 #: ../../archive.php
 msgid "Daily Archives: %s"
-msgstr "Ежедневно Архивы: %s"
+msgstr "Dnevni Arhiv: %s"
 
 #: ../../archive.php
 msgid "Monthly Archives: %s"
-msgstr "Архив за месяц: %s"
+msgstr "Mesečni arhivi: %s"
 
 #: ../../archive.php
 msgid "Yearly Archives: %s"
-msgstr "Ежегодно Архивы: %s"
+msgstr "Letno arhivov: %s"
 
 #: ../../archive.php ../../footer.php ../../sidebar-left.php
 #: ../../sidebar-right.php ../../sidebar.php
 msgid "Archives"
-msgstr "Архив"
+msgstr ""
 
 #: ../../comments.php
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -60,45 +60,45 @@ msgstr[0] ""
 
 #: ../../comments.php
 msgid "Comment navigation"
-msgstr "Комментарий навигации"
+msgstr ""
 
 #: ../../comments.php
 msgid "Older Comments"
-msgstr "Старые комментарии"
+msgstr ""
 
 #: ../../comments.php
 msgid "Newer Comments"
-msgstr "Новые комментарии"
+msgstr ""
 
 #: ../../comments.php
 msgid "Comments are closed."
-msgstr "Комментарии закрыты"
+msgstr ""
 
 #: ../../content.php
 msgid "Permalink to %s"
-msgstr "Постоянная ссылка на %s"
+msgstr "Permalink: %s"
 
 #: ../../content.php
 msgid "Continue reading"
-msgstr "Продолжить чтение"
+msgstr ""
 
 #: ../../content.php ../../image.php
 msgid "Pages:"
-msgstr "Страниц"
+msgstr ""
 
 #: ../../content.php ../../image.php
 msgid "Edit"
-msgstr "все"
+msgstr "Uredi"
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
 msgid "Pages"
-msgstr "Страниц"
+msgstr "Strani"
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
 msgid "Categories"
-msgstr "Рубрики"
+msgstr ""
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
@@ -108,15 +108,13 @@ msgstr "WordPress"
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
 msgid "http://wordpress.org/"
-msgstr "http://ru.wordpress.org/"
+msgstr "http://sl.wordpress.org/"
 
 #: ../../footer.php ../../sidebar-left.php ../../sidebar-right.php
 #: ../../sidebar.php
 msgid ""
 "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr ""
-"Сайт работает на WordPress &#8212; современной системе персональных "
-"публикаций."
 
 #: ../../functions.php
 msgid "Pingback:"
@@ -124,130 +122,128 @@ msgstr "Pingback:"
 
 #: ../../functions.php
 msgid "(Edit)"
-msgstr "(Edit)"
+msgstr "(Urejanje)"
 
 #: ../../functions.php
 msgid "says:"
-msgstr "говорит"
+msgstr ""
 
 #: ../../functions.php
 msgid "Your comment is awaiting moderation."
-msgstr "Ваш комментарий ожидает проверки."
+msgstr ""
 
 #: ../../functions.php
 msgid "%1$s at %2$s"
-msgstr "%1$ s на %2$ s"
+msgstr "%1$ s na %2$ s"
 
 #: ../../functions.php
 msgid "CyberChimps Professional Responsive WordPress Theme"
-msgstr "CyberChimps профессиональный, отзывчивый WordPress тема"
+msgstr "CyberChimps strokovno odziven WordPress tema"
 
 #: ../../functions.php
 msgid "Slider Lite"
-msgstr "Слайдер Lite"
+msgstr ""
 
 #: ../../functions.php
 msgid "Boxes"
-msgstr "Коробки"
+msgstr ""
 
 #: ../../functions.php
 msgid "Portfolio Lite"
-msgstr "Портфолио Lite"
+msgstr ""
 
 #: ../../functions.php
 msgid "Post Page"
-msgstr "Пост страница"
+msgstr ""
 
 #: ../../image.php
 msgid "Published"
-msgstr "Опубликован"
+msgstr "Objavljeno"
 
 #: ../../image.php
 msgid "size"
-msgstr "Размер"
+msgstr "Velikost"
 
 #: ../../image.php
 msgid "in"
-msgstr "д"
+msgstr ""
 
 #: ../../image.php
 msgid "Previous"
-msgstr "Пред."
+msgstr "prejšnji"
 
 #: ../../image.php
 msgid "Next"
-msgstr "след."
+msgstr "Naslednja"
 
 #: ../../image.php
 msgid "Post a comment"
-msgstr "оставить комментарий"
+msgstr ""
 
 #: ../../image.php
 msgid "or leave a trackback"
-msgstr "или трекбек"
+msgstr ""
 
 #: ../../image.php
 msgid "Trackback URL"
-msgstr "URL-АДРЕС"
+msgstr ""
 
 #: ../../image.php
 msgid "Comments are closed, but you can leave a trackback:"
-msgstr "Комментарии закрыты, но вы можете оставить Архив:"
+msgstr ""
 
 #: ../../image.php
 msgid "Trackbacks are closed, but you can"
-msgstr "Trackbacks закрыты, но вы можете"
+msgstr ""
 
 #: ../../image.php
 msgid "post a comment"
-msgstr "оставить комментарий"
+msgstr ""
 
 #: ../../image.php
 msgid "Both comments and trackbacks are currently closed."
-msgstr "Комментарии и обратные ссылки в настоящее время закрыты."
+msgstr ""
 
 #: ../../no-results.php
 msgid "Nothing Found"
-msgstr "Ничего не найдено"
+msgstr ""
 
 #: ../../no-results.php
 msgid "Ready to publish your first post?"
-msgstr "Мы готовы опубликовать свой первый пост?"
+msgstr "Pripravljen, da objavijo svoj prvi post?"
 
 #: ../../no-results.php
 msgid "Get started here"
-msgstr "Начать здесь"
+msgstr ""
 
 #: ../../no-results.php
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Извините, но ничего не соответствует условиям поиска. Пожалуйста, попробуйте "
-"еще раз с некоторыми разные ключевые слова."
 
 #: ../../no-results.php
 msgid ""
 "It seems we cannot find what you are looking for. Perhaps searching can help."
 msgstr ""
-"Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
+"Zdi se, da ne moremo najti tisto, kar iščete. Morda iskanje lahko pomaga."
 
 #: ../../search.php
 msgid "Search Results for: %s"
-msgstr "Результаты поиска для: %s"
+msgstr "Iskanje rezultatov za: %s"
 
 #: ../../searchform.php
 msgid "Search"
-msgstr "поиск"
+msgstr "išči"
 
 #: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Subscribe"
-msgstr "Подпис"
+msgstr "Naročilo"
 
 #: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Entries (RSS)"
-msgstr "Записи (RSS)"
+msgstr ""
 
 #: ../../sidebar-left.php ../../sidebar-right.php ../../sidebar.php
 msgid "Comments (RSS)"
-msgstr "Комментарии (RSS)"
+msgstr ""
