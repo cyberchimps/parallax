@@ -554,7 +554,7 @@ blockquote cite:before {
 }
 
 .entry-title a:hover {
-	color: #0088cc;
+	color: #527175;
 }
 
 article.post p, article.page p {
@@ -711,6 +711,15 @@ footer.entry-meta {
 	background: #ffffff;
 }
 
+h2.comments-title {
+	font-size: 1.5em;
+	color: #333;
+}
+
+h3#reply-title {
+	font-size: 1.5em;
+}
+
 #comments .navigation {
 	padding: 0 0 18px 0;
 }
@@ -721,6 +730,7 @@ label[for="comment"] {
 
 ol.commentlist {
 	list-style: none;
+	margin-bottom: 25px;
 }
 
 ol.commentlist p {
