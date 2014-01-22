@@ -378,18 +378,22 @@ header #search #searchform {
 		font-weight: normal;
 	}
 
-	.navbar .nav-collapse .nav > li > a {
+	.nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
+		background: transparent;
+	}
+
+	.nav-collapse .nav > li > a {
 		color: #ffffff;
 	}
 
-	.navbar-inverse .nav-collapse .nav > li > a:hover,
+	.navbar .nav-collapse .nav > li > a:hover,
 	.navbar-inverse .nav-collapse .dropdown-menu a:hover {
-		color: #ffffff;
+		color: #2c828f;
 	}
 
-	.navbar-inverse .nav-collapse .nav > li.current-menu-item > a,
-	.navbar-inverse .nav-collapse .nav > li.current-menu-ancestor > a {
-		color: #ffffff;
+	.navbar .nav-collapse .nav > li.current-menu-item > a,
+	.navbar .nav-collapse .nav > li.current-menu-ancestor > a {
+		color: #2c828f;
 	}
 
 	.nav-collapse .dropdown .caret {
@@ -400,7 +404,7 @@ header #search #searchform {
 		display: block;
 	}
 
-	.navbar-inverse .nav-collapse .dropdown-menu .active > a {
+	.navbar .nav-collapse .dropdown-menu .active > a {
 		background-color: #000000;
 		background-image: none;
 		color: #ffffff;
