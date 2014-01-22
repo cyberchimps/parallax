@@ -142,9 +142,7 @@ header#cc-header h2.site-title {
 	margin-top: 25px;
 	margin-bottom: 15px;
 	text-shadow: 6px 0 1px #d5d5d3;
-	/*font-style: italic;*/
 	font-size: 82px;
-	/*font-family: 'Playfair Display', serif;*/
 }
 
 header#cc-header h2.site-title a {
@@ -205,7 +203,6 @@ header #search #searchform {
 }
 
 #navigation {
-
 }
 
 .main-navigation.navbar {
@@ -357,8 +354,6 @@ header #search #searchform {
 	border-bottom-color: #ffffff;
 }
 
-/*SARAH END*/
-
 .current-menu-ancestor.dropdown {
 	background-color: #111111;
 }
@@ -471,7 +466,6 @@ article.post, article.page, article.attachment {
 
 .entry-content {
 	margin: 20px 0;
-
 }
 
 .page-header {
@@ -489,7 +483,6 @@ article.post, article.page, article.attachment {
 	margin-bottom: 30px;
 	padding: 25px;
 	border-top: 5px solid rgba(0, 82, 94, 0.47);
-	/*border-bottom: 5px solid rgba(0, 0, 0, 0.1);*/
 }
 
 .entry-header {
@@ -844,7 +837,6 @@ ol.commentlist li.odd {
 	margin-bottom: 30px;
 	padding: 20px;
 	border-top: 5px solid rgba(0, 82, 94, 0.47);
-	/*border-bottom: 5px solid rgba(0, 0, 0, 0.3);*/
 	background: #ffffff;
 }
 
