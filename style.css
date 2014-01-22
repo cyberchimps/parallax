@@ -484,7 +484,7 @@ article {
 article.post, article.page, article.attachment {
 	margin-bottom: 30px;
 	padding: 25px;
-	border-top: 5px solid rgba(0, 0, 0, 0.1);
+	border-top: 5px solid rgba(0, 82, 94, 0.47);
 	/*border-bottom: 5px solid rgba(0, 0, 0, 0.1);*/
 }
 
@@ -839,7 +839,7 @@ ol.commentlist li.odd {
 .widget-container {
 	margin-bottom: 30px;
 	padding: 20px;
-	border-top: 5px solid rgba(0, 0, 0, 0.1);
+	border-top: 5px solid rgba(0, 82, 94, 0.47);
 	/*border-bottom: 5px solid rgba(0, 0, 0, 0.3);*/
 	background: #ffffff;
 }
