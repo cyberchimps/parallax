@@ -314,3 +314,9 @@ function cyberchimps_twitter_handle_filter() {
 }
 
 add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_filter' );
+
+// Set blog layout option default
+function cyberchimps_blog_layout_options_default() {
+	return 'full_width';
+}	
+add_filter( 'cyberchimps_blog_layout_options_default', 'cyberchimps_blog_layout_options_default' );
