@@ -1,3 +1,6 @@
+/* @override 
+	http://cyberchimps.dev/wp-content/themes/parallax/style.css?ver=1.0 */
+
 /*
 Theme Name: Parallax
 Theme URI: http://cyberchimps.com/
@@ -128,37 +131,42 @@ header #social .icons a {
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
-header#cc-header h2.site-title {
-	margin-top: 25px;
-	margin-bottom: 15px;
-	text-shadow: 6px 0 1px #d5d5d3;
-	font-size: 82px;
+h2.site-title {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font: bold 32px "helvetica neue", helvetica, arial, sans-serif;
 }
 
-header#cc-header h2.site-title a {
+h2.site-title a {
 	text-decoration: none;
+	color: #fff;
 }
 
-header#cc-header h2.site-description {
+h2.site-title a:hover {
+	text-decoration: none;
+	color: #b70c00;
+}
+
+h2.site-description {
 	margin: 0;
 	font-size: 14px;
 }
 
-header#cc-header .contact_details {
+.contact_details {
 	float: right;
 }
 
-header#cc-header .register {
+.register {
 	float: right;
 }
 
-header#cc-header .blog_description {
+.blog_description {
 	float: right;
 }
 
-header#cc-header p {
+/*header#cc-header p {
 	font-size: 1.2em;
-}
+}*/
 
 @media screen and (max-width: 767px) {
 	#header_section .container-fluid {
@@ -178,14 +186,15 @@ header #search #searchform {
 /*****************************/
 
 #navigation_menu.container-full-width {
-	background: rgba(0, 0, 0, 0.9);
+	background: #111;
+	border-bottom: 4px solid #b2b3b2;
+	margin-bottom: 30px;
 }
 
 #navigation_menu {
 	position: fixed;
 	top: 0;
 	z-index: 99999;
-	background: #000000;
 }
 
 .admin-bar #navigation_menu {
@@ -197,6 +206,7 @@ header #search #searchform {
 
 .main-navigation.navbar {
 	margin-bottom: 0;
+	margin-top: 11px;
 }
 
 .main-navigation .navbar-inner {
@@ -308,7 +318,8 @@ header #search #searchform {
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
 	background-color: transparent;
-	color: #2c828f;
+	color: #eee;
+	border-bottom: 4px solid #ac1516;
 	text-shadow: none;
 }
 
