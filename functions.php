@@ -317,3 +317,9 @@ function cyberchimps_blog_layout_options_default() {
 	return 'full_width';
 }	
 add_filter( 'cyberchimps_blog_layout_options_default', 'cyberchimps_blog_layout_options_default' );
+
+// Remove header drag and drop as it is not suitable to the design in this theme.
+function cyberchimps_remove_header_drag_drop( $sections_list ) {
+	return cyberchimps_remove_options( $sections_list, array( 'cyberchimps_header_drag_drop_section' ) );
+}
+add_filter( 'cyberchimps_sections_filter', 'cyberchimps_remove_header_drag_drop' );
