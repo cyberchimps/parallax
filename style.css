@@ -113,13 +113,15 @@ header {
 
 /* SOCIAL ==============================================*/
 
-header #social .icons a {
-	float: right;
-	margin-left: 5px;
+#navigation_menu #social {
+	margin-top: 15px;
 }
 
-.icons {
-	margin-top: 15px;
+#navigation_menu .default-icons a {
+	font-size: 30px;
+	-webkit-border-radius: 49%;
+	-moz-border-radius: 49%;
+	border-radius: 49%;
 }
 
 /* DETAILS =============================================*/
@@ -233,12 +235,13 @@ header #search #searchform {
 }
 
 .main-navigation .nav > li > a:hover {
-	color: #2c828f;
+	color: #eeeeee;
+	border-bottom: 4px solid #ac1516;
 }
 
 .navbar .nav li.dropdown > a:hover .caret {
-	border-top-color: #2c828f;
-	border-bottom-color: #2c828f;
+	border-top-color: #eeeeee;
+	border-bottom-color: #eeeeee;
 }
 
 .main-navigation .nav li ul li ul {
