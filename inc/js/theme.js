@@ -17,11 +17,23 @@
 /**
  * Makes header clear the static menu bar
  */
-jQuery(document).ready(function($) {
-    var height = $('#navigation_menu').height();
 
-	// Remove a small discrepancy with the height calculation
-	height = height - 5;
 
-	$("#header_section").css("margin-top", height + "px");
-});
+(function ($) {
+
+	var setHeight = function (h) {
+
+		// Remove a small discrepancy with the height calculation
+		height = h;
+
+		$("#cc_spacer").css("height", height + "px");
+		}
+
+	$(window).resize(function(){
+		setHeight($("#navigation_menu").height());
+	})
+
+	$(window).ready(function(){
+		setHeight($("#navigation_menu").height());
+	})
+})(jQuery, window);
