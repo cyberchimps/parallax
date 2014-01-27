@@ -314,7 +314,12 @@ header #search #searchform {
 	color: #777777;
 }
 
-.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
 	border-bottom: 4px solid #ac1516;
 	background-color: transparent;
 	color: #eeeeee;
@@ -382,7 +387,11 @@ header #search #searchform {
 		font-weight: normal;
 	}
 
-	.nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
+	.nav-collapse .nav > li > a:hover {
+		background: transparent;
+		border-bottom: 4px solid transparent;
+	}
+	.nav-collapse .dropdown-menu a:hover {
 		background: transparent;
 	}
 
