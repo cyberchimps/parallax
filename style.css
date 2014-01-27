@@ -415,6 +415,35 @@ header #search #searchform {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	#logo_container,
+	#logo_container #logo {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+
+	#social_container,
+	#social_container #social {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+
+	#social_container #social a.symbol {
+		float: none;
+	}
+
+	#social_container #social a.symbol:last-child {
+		margin-right: 0;
+	}
+
+	#navigation {
+		width: 100%;
+		margin: 0;
+	}
+}
+
 @media screen and (max-width: 782px) {
 	.admin-bar #navigation_menu {
 		top: 45px;
