@@ -34,7 +34,7 @@ add_action( 'cyberchimps_site_info', 'cyberchimps_add_site_info' );
 
 function cyberchimps_parallax_script_setup() {
 
-	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/inc/js/theme.js', array( 'jquery' ) );
+	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/inc/js/theme.min.js', array( 'jquery' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'cyberchimps_parallax_script_setup' );

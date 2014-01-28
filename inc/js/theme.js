@@ -23,8 +23,8 @@
 
 	var setHeight = function (h) {
 
-		// Remove a small discrepancy with the height calculation
-		height = h-3;
+		// 5px removes the top border of the first element that appears below the header
+		height = h-5;
 
 		$("#cc_spacer").css("height", height + "px");
 		}
