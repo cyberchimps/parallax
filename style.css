@@ -129,16 +129,9 @@ header {
 
 /* DETAILS =============================================*/
 
-#header_section.container-full-width {
-	padding: 30px 0;
-	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
-	background-color: #ffffff;
-	background-color: rgba(255, 255, 255, 0.8);
-}
-
 h2.site-title {
 	margin-top: 15px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	font: bold 32px "helvetica neue", helvetica, arial, sans-serif;
 }
 
@@ -188,7 +181,8 @@ header #search #searchform {
 
 #navigation_menu.container-full-width {
 	border-bottom: 4px solid #b2b3b2;
-	background: #111111;
+	background-color: #111111;
+	background-image: url(images/bg.jpg);
 }
 
 #navigation_menu {
@@ -201,16 +195,13 @@ header #search #searchform {
 	top: 28px;
 }
 
-#navigation {
-}
-
 .main-navigation.navbar {
 	margin-top: 11px;
 	margin-bottom: 0;
 }
 
 .main-navigation .navbar-inner {
-	padding: 5px 0;
+	padding: 5px 0 0;
 	border: none;
 	-webkit-border-radius: 1px;
 	border-radius: 1px;
@@ -220,8 +211,9 @@ header #search #searchform {
 }
 
 .main-navigation .nav > li > a {
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-right: 15px;
+	padding-bottom: 12px;
+	padding-left: 15px;
 	border-bottom: 4px solid transparent;
 	color: #ffffff;
 	text-transform: uppercase;
@@ -451,6 +443,7 @@ header #search #searchform {
 @media screen and (max-width: 782px) {
 	.admin-bar #navigation_menu {
 		top: 45px;
+		position: absolute;
 	}
 }
 
@@ -940,7 +933,8 @@ table#wp-calendar td {
 
 #footer_section.container-full-width {
 	border-top: 5px solid rgba(0, 0, 0, 0.3);
-	background: rgba(255, 255, 255, 0.9);
+	background-color: #111111;
+	background-image: url(images/bg.jpg);
 }
 
 #footer-widgets {
@@ -954,7 +948,7 @@ table#wp-calendar td {
 
 #footer-widgets aside,
 #footer-widgets aside a {
-	color: #444444;
+	color: #aaaaaa;
 }
 
 #footer-widgets aside h3.widget-title {
@@ -962,7 +956,7 @@ table#wp-calendar td {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #cccccc;
-	color: #333333;
+	color: #cccccc;
 	font-size: 1.1em;
 }
 
@@ -982,7 +976,7 @@ table#wp-calendar td {
 }
 
 #after_footer.container-full-width, #footer_menu {
-	background-color: rgba(2, 2, 2, 0.7);
+	background-color: #212121;
 }
 
 /*****************************/
@@ -1071,7 +1065,7 @@ table#wp-calendar td {
 	padding-bottom: 10px;
 	padding-left: 10px;
 	background: rgba(51, 51, 51, 0.55);
-	color: #fff;
+	color: #ffffff;
 }
 
 a .portfolio-caption {

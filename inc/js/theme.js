@@ -24,7 +24,7 @@
 	var setHeight = function (h) {
 
 		// Remove a small discrepancy with the height calculation
-		height = h;
+		height = h-3;
 
 		$("#cc_spacer").css("height", height + "px");
 		}

@@ -59,15 +59,15 @@
 	<div class="container">
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div id="logo_container" class="span2">
+				<div id="logo_container" class="span3">
 					<?php cyberchimps_header_logo(); ?>
 				</div>
-				<!-- span2 -->
+				<!-- span3 -->
 				<div id="social_container" class="span2">
 					<?php cyberchimps_header_social_icons(); ?>
 				</div>
 				<!-- span 2 -->
-				<nav id="navigation" class="span8" role="navigation">
+				<nav id="navigation" class="span7" role="navigation">
 					<div class="main-navigation navbar">
 						<div class="navbar-inner">
 							<div class="container">
