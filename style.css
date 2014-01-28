@@ -4,7 +4,7 @@ Theme URI: http://cyberchimps.com/
 Author: CyberChimps
 Author URI: http://www.cyberchimps.com/
 Description: A Free HTML5 Responsive Drag & Drop Starter WordPress Theme by CyberChimps WordPress Themes featuring Twitter Bootstrap, and responsive touch friendly theme options.
-Version: 1.0.0
+Version: 1.0.1
 Tags: black, gray, red, dark, light, one-column, two-columns, right-sidebar, fixed-layout, fluid-layout, custom-background, custom-colors, custom-menu, featured-images, post-formats, theme-options, threaded-comments, sticky-post
 License: GNU General Public License version 3
 License URI: http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
@@ -1000,6 +1000,7 @@ table#wp-calendar td {
 
 #slider_lite_section {
 	padding: 100px 0;
+	border-top: 5px solid rgba(0, 0, 0, 0.3);
 	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
 
 }
@@ -1008,6 +1009,7 @@ table#wp-calendar td {
 
 #boxes_lite_section.container-full-width {
 	padding: 100px 0 90px 0;
+	border-top: 5px solid rgba(0, 0, 0, 0.3);
 	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
 	background-size: 100%;
 }
@@ -1050,6 +1052,7 @@ table#wp-calendar td {
 #portfolio_lite_section.container-full-width {
 	padding-top: 100px;
 	padding-bottom: 80px;
+	border-top: 5px solid rgba(0, 0, 0, 0.3);
 	border-bottom: 5px solid rgba(0, 0, 0, 0.3);
 	background-size: 100%;
 }
@@ -1101,40 +1104,6 @@ a .portfolio-caption {
 
 #gallery ul.row-fluid li#portfolio_wrap:hover img {
 	opacity: .9;
-}
-
-/* TWITTER =====================================================*/
-
-#twitter-container {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	border-top: 3px solid #e2eaed;
-}
-
-#twitter-bar {
-	padding: 20px;
-	background: #ffffff;
-}
-
-#twitter-bar #twitter-text img {
-	float: left;
-	margin-top: -5px;
-}
-
-#twitter-bar #twitter-text p {
-	padding-left: 75px;
-}
-
-@media (max-width: 480px) {
-	#twitter-bar #twitter-text img {
-		margin-top: 0;
-		width: 30px;
-		height: 21px;
-	}
-
-	#twitter-bar #twitter-text p {
-		padding-left: 40px;
-	}
 }
 
 /*****************************/

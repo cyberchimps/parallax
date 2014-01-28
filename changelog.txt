@@ -2,6 +2,10 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.1 (01-28-14)
+
+- Initial bug fixes
+
 Version 1.0.0 (12-5-13)
 
-Initial Release
+- Initial Release
