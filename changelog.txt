@@ -2,6 +2,9 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.5 (2-18-14)
+- Slider is made to be start sliding on page load.
+
 Version 1.0.3 - 1.0.4 (02-13-14)
 
 - Updated translations
