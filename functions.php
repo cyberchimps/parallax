@@ -144,14 +144,14 @@ function cyberchimps_options_theme_name() {
 
 //Theme Pro Name
 function cyberchimps_upgrade_bar_pro_title() {
-	$text = 'a CyberChimps Pro Theme';
+	$text = 'Parallax Pro';
 
 	return $text;
 }
 
 //Upgrade link
 function cyberchimps_upgrade_bar_pro_link() {
-	$url = 'http://cyberchimps.com/store/';
+	$url = 'http://cyberchimps.com/store/parallax-pro';
 
 	return $url;
 }
