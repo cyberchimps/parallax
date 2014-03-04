@@ -79,7 +79,7 @@
 
 									<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
 
-									<?php if ( cyberchimps_get_option( 'searchbar', 1 ) == "1" ) : ?>
+									<?php if ( cyberchimps_get_option( 'searchbar', 0 ) == "1" ) : ?>
 										<div class="menu-searchbar">
 											<?php get_search_form(); ?>
 										</div>
