@@ -410,6 +410,14 @@ header #search #searchform {
 		background-image: none;
 		color: #ffffff;
 	}
+	
+	/*  Mobile menu scrolling fix */
+	#navigation_menu{
+		position: relative;
+	}
+	#cc_spacer{
+		display: none;
+	}
 }
 
 @media screen and (max-width: 768px) {
