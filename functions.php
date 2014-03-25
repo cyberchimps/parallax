@@ -311,6 +311,16 @@ function cyberchimps_blog_draganddrop_defaults() {
 
 add_filter( 'cyberchimps_elements_draganddrop_defaults', 'cyberchimps_blog_draganddrop_defaults' );
 
+
+// Customize social icons.
+function cyberchimps_social_icon_options( $options ) {
+	$options['default'] = get_template_directory_uri() . '/images/social/icons-default.png';
+	
+	return $options;
+}
+add_filter( 'cyberchimps_social_icon_options', 'cyberchimps_social_icon_options' );
+
+
 // Default for twitter bar handle
 function cyberchimps_twitter_handle_filter() {
 	return 'WordPress';
