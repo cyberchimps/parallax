@@ -2,6 +2,11 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.10 (3-27-14)
+- Updated Elements Translation.
+- Mobile menu scrolling fixed.
+- Updated social icon screenshot.
+
 Version 1.0.9 (3-21-14)
 - Fixed IE8 compatibility issue.
 
