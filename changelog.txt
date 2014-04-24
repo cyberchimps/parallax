@@ -2,6 +2,9 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.15 (4-24-14)
+- Fixed undefined $ error in browser console.
+
 Version 1.0.14 (4-24-14)
 - Added recommendation for clef plugin.
 - Updated translations.
