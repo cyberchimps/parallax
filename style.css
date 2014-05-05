@@ -1014,6 +1014,10 @@ table#wp-calendar td {
 
 }
 
+#slider_lite .item > a {
+    margin: 0;
+}
+
 /* WIDGET BOXES ===============================================*/
 
 #boxes_lite_section.container-full-width {
