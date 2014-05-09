@@ -2,6 +2,12 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.17 (5-9-14)
+- Fixed W3C validator error issue with IE compatibility meta tags.
+- Fixed missing image error: removed unused function.
+- Added FooBox as recommended plugin.
+- Fixed unwanted slider link space consumption.
+
 Version 1.0.16 (5-2-14)
 - Fixed byline toggle issue. 
 - Fixed missing image error: removed unused function.
