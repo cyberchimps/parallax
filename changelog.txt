@@ -2,6 +2,9 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.20 (5-30-14)
+- Fixed casing of CyberChimpsParallax class.
+
 Version 1.0.19 (5-23-14)
 - Updated ugrade text.
 - Removed left sidebar from widget section.
