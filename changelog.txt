@@ -2,6 +2,12 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.23 (6-13-14)
+- Code reformatted: Changed spaces to tabs.
+
+Version 1.0.22 (6-06-14)
+- Uploading again due to technical problem.
+
 Version 1.0.21 (6-06-14)
 - Code reformatting: Changed spaces to tabs.
 
