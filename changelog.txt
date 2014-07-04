@@ -2,6 +2,9 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.26 (7-04-14)
+- Added option for Instagram Icon.
+
 Version 1.0.25 (6-27-14)
 - Core Translation Updated.
 
