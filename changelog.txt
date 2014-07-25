@@ -2,6 +2,9 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.0.29 (7-25-14)
+- Layout fixed for multiple rows of footer widget.
+
 Version 1.0.28 (7-18-14)
 - Fixed broken link to CyberChimps logo.
 
