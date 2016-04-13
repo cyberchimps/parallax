@@ -1,7 +1,7 @@
 Parallax Free Changelog
 
 ****************************
-Version 1.0.39 (13-04-16)
+Version 1.0.39 (14-04-16)
 - Fixed site font issue
 
 Version 1.0.38 (01-12-15)
