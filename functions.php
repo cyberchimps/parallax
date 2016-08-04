@@ -385,4 +385,11 @@ remove_action( 'cyberchimps_options_before_container', 'cyberchimps_upgrade_bar'
 if( cyberchimps_theme_check() == 'free' ) {
 	add_action( 'cyberchimps_options_before_container', 'cyberchimps_parallax_upgrade_bar' );
 }
+
+// enabling theme support for title tag
+function parallax_title_setup() 
+{
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'parallax_title_setup' );
 ?>
