@@ -1156,3 +1156,9 @@ a .portfolio-caption {
 select{
 	max-width:100%;
 }
+
+/* For box content exceeding the box div*/
+.box.span4 {
+    display: flex;
+    flex-wrap: wrap;
+}
