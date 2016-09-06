@@ -1151,3 +1151,8 @@ a .portfolio-caption {
 		float: none;
 	}
 }
+
+/* For select area alignment issue */
+select{
+	max-width:100%;
+}
