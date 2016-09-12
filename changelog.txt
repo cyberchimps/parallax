@@ -1,6 +1,10 @@
 Parallax Free Changelog
 
 ****************************
+Version 1.0.41 (13-09-16)
+- Fixed display issue for dropdown in sidebar.
+- Fixed display issue for box elements. 
+
 Version 1.0.40 (5-8-16)
 - Updated as per latest Theme Check guidelines
 
