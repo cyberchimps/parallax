@@ -1151,3 +1151,14 @@ a .portfolio-caption {
 		float: none;
 	}
 }
+
+/* For select area alignment issue */
+select{
+	max-width:100%;
+}
+
+/* For box content exceeding the box div*/
+.box.span4 {
+    display: flex;
+    flex-wrap: wrap;
+}
