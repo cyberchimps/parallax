@@ -71,20 +71,20 @@
 							<div class="container">
 
 								<?php /* hide collapsing menu if not responsive */
-								if (cyberchimps_get_option( 'responsive_design', 'checked' )): ?>
+								if (get_theme_mod( 'responsive_design', 'checked' )): ?>
 								<div class="nav-collapse collapse">
 									<?php endif; ?>
 
 									<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav', 'walker' => new cyberchimps_walker(), 'fallback_cb' => 'cyberchimps_fallback_menu' ) ); ?>
 
-									<?php if ( cyberchimps_get_option( 'searchbar', 0 ) == "1" ) : ?>
+									<?php if ( get_theme_mod( 'searchbar', 0 ) == "1" ) : ?>
 										<div class="menu-searchbar">
 											<?php get_search_form(); ?>
 										</div>
 									<?php endif; ?>
 
 									<?php /* hide collapsing menu if not responsive */
-									if (cyberchimps_get_option( 'responsive_design', 'checked' )): ?>
+									if (get_theme_mod( 'responsive_design', 'checked' )): ?>
 								</div>
 							<!-- collapse -->
 
