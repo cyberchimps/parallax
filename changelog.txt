@@ -2,6 +2,9 @@ Parallax Free Changelog
 
 ****************************
 
+Version 1.1 (10-03-16)
+- Reintroduced Theme Options.
+
 Version 1.0.42 (14-09-16)
 - Bux Fix
 
