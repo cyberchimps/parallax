@@ -1,6 +1,9 @@
 Parallax Free Changelog
 
 ****************************
+Version 1.2 (18-04-17)
+- Fixed issue with PHP version 7.1
+- Fixed issue with loading google fonts (used protocol relative link)
 
 Version 1.1 (10-03-16)
 - Reintroduced Theme Options.
