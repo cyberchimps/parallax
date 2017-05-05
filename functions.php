@@ -402,4 +402,65 @@ function parallax_title_setup()
 	add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'parallax_title_setup' );
+
+//add new add on - WPForms
+function parallax_new_addon_sections( $sections_list ) {
+	$sections_list[] = array(
+		'id'      => 'cyberchimps_wpforms_lite_options',
+		'label'   => __( 'WPForms Lite', 'parallax' ),
+		'heading' => 'cyberchimps_addons_heading'
+	);
+
+	return $sections_list;
+}
+
+add_filter( 'cyberchimps_section_list', 'parallax_new_addon_sections', 20, 1 );
+
+// Addon Fields
+function parallax_new_addon_fields( $fields_list ) {
+	$fields_list[] = array(
+		'name'     => __( 'WPForms Lite', 'cyberchimps_core' ),
+		'id'       => 'wpforms_lite',
+		'type'     => 'info',
+		'callback' => 'cyberchimps_custom_wpforms_lite_callback',
+		'section'  => 'cyberchimps_wpforms_lite_options',
+		'heading'  => 'cyberchimps_addons_heading'
+	);
+
+	return $fields_list;
+}
+
+add_filter( 'cyberchimps_field_list', 'parallax_new_addon_fields', 20, 1 );
+
+// The WPForms text
+function cyberchimps_custom_wpforms_lite_callback( $value ) {
+	$output   = '';
+	$plugin   = 'wpforms-lite/wpforms.php';
+	$icon     = '<img class="plugins-icon" src="' . get_template_directory_uri() . '/images/addons/wpforms.png" />';
+	$icon_neg = '<img class="plugins-icon" src="' . get_template_directory_uri() . '/images/addons/wpforms-neg.png" />';
+
+	$installed_plugins = get_plugins();
+
+	if( isset( $installed_plugins[$plugin] ) ) {
+		if( is_plugin_active( $plugin ) ) {
+			$output .= $icon . '<a href="' . admin_url( 'admin.php?page=wpforms-settings' ) . '">' . __( 'WPForms Settings', 'parallax' ) . '</a>';
+		}
+		else {
+			$output .= $icon_neg . '<a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Please activate the "WPForms Lite" plugin', 'parallax' ) . '</a>';
+		}
+	}
+	else {
+		$output .= $icon_neg . '<a href="' . cyberchimps_wpforms_install_link() . '">' . __( 'Install the "WPForms Lite" plugin', 'parallax' ) . '</a>';
+	}
+
+	echo $output;
+}
+
+// return a nonced installation link for the plugin.
+function cyberchimps_wpforms_install_link() {
+	include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+	$slug = 'wpforms-lite';
+
+	return wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug );
+}
 ?>
