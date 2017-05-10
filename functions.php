@@ -464,9 +464,9 @@ function cyberchimps_wpforms_install_link() {
 	return wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug );
 }
 
-add_action( 'after_setup_theme', 'yourtheme_setup' );
+add_action( 'after_setup_theme', 'parallax_woocommerce_gallery_support' );
  
-function yourtheme_setup() {
+function parallax_woocommerce_gallery_support() {
     add_theme_support( 'wc-product-gallery-zoom' );
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
