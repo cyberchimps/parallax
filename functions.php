@@ -20,9 +20,9 @@ function cyberchimps_text_domain() {
 	load_theme_textdomain( 'parallax', get_template_directory() . '/inc/languages' );
 }
 add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
-
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
+require_once( get_template_directory() . '/inc/featured-lite.php' );
 
 // Set the content width based on the theme's design and stylesheet.
 if ( !isset( $content_width ) ) {
@@ -37,7 +37,31 @@ function cyberchimps_add_site_info() {
 }
 
 add_action( 'cyberchimps_site_info', 'cyberchimps_add_site_info' );
+add_action( 'wp_footer', 'featured_parallax_render' );
+function featured_parallax_render() {
+$parallax_image = ( get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) ) ? get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) : '';
+	?>
+			<!--  <script>
+				jQuery(document).ready(function () {		alert('sdf');			
+					jQuery('#featured_lite_section').parallax('50%', 0.5);					
 
+				});
+			</script>-->
+			<script>
+					jQuery(document).ready(function () {
+						<?php
+						// Add parallax.
+						 ?>
+						jQuery('#featured_lite_section').css({
+							
+							'background-size': '100%'
+						});
+						jQuery('#featured_lite_section').parallax('50%', 0.5);
+						<?php ?>
+					});
+				</script>
+		<?php
+}
 function cyberchimps_parallax_script_setup() {
 
 	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/inc/js/theme.min.js', array( 'jquery' ) );
@@ -298,12 +322,104 @@ add_filter( 'cyberchimps_typography_styles', 'cyberchimps_typography_styles' );
 add_filter( 'cyberchimps_typography_defaults', 'cyberchimps_typography_defaults' );
 add_filter( 'cyberchimps_typography_heading_defaults', 'cyberchimps_typography_heading_defaults' );
 
+function parallax_customize_register( $wp_customize )
+{ 
+	$wp_customize->add_section( 'cyberchimps_featured_lite_section', array(
+			'priority' => 15,
+			'capability' => 'edit_theme_options',
+			'theme_supports' => '',
+			'title' => __( 'Featured Lite', 'cyberchimps_core' ),
+			'description' => '',
+			'panel' => 'blog_id',
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[bl_featuredarea_title]', array(
+		'type' => 'option',
+		'sanitize_callback' => 'cyberchimps_text_sanitization'
+	) );
+	$wp_customize->add_control( 'bl_featuredarea_title', array(
+			'label' => __( 'Featured Area Title', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_featured_lite_section',
+			'default' => __( 'The Future Has Arrived', 'cyberchimps_core' ),
+			'settings' => 'cyberchimps_options[bl_featuredarea_title]',
+			'type' => 'text'
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[bl_featuredarea_text]', array(
+			'type' => 'option',
+			'sanitize_callback' => 'cyberchimps_text_sanitization'
+	) );
+	$wp_customize->add_control( 'bl_featuredarea_text', array(
+			'label' => __( 'Featured Area Text', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_featured_lite_section',
+			'default' => __( 'Parallax themev', 'cyberchimps_core' ),
+			'settings' => 'cyberchimps_options[bl_featuredarea_text]',
+			'type' => 'textarea'
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[bl_featuredarea_button1_text]', array(
+			'type' => 'option',
+			'sanitize_callback' => 'cyberchimps_text_sanitization'
+	) );
+	$wp_customize->add_control( 'bl_featuredarea_button1_text', array(
+			'label' => __( 'Featured Area Button1 Text', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_featured_lite_section',
+			'default' => __( 'Free Responsive Themes', 'cyberchimps_core' ),
+			'settings' => 'cyberchimps_options[bl_featuredarea_button1_text]',
+			'type' => 'text'
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[bl_featuredarea_button1_url]', array(
+			'type' => 'option',
+			'sanitize_callback' => 'cyberchimps_text_sanitization'
+	) );
+	$wp_customize->add_control( 'bl_featuredarea_button1_url', array(
+			'label' => __( 'Featured Area Button1 URL', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_featured_lite_section',
+			'default' => '',
+			'settings' => 'cyberchimps_options[bl_featuredarea_button1_url]',
+			'type' => 'text'
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[bl_featuredarea_button2_text]', array(
+			'type' => 'option',
+			'sanitize_callback' => 'cyberchimps_text_sanitization'
+	) );
+	$wp_customize->add_control( 'bl_featuredarea_button2_text', array(
+			'label' => __( 'Featured Area Button2 Text', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_featured_lite_section',
+			'default' => __( 'Explore Pro Themes', 'cyberchimps_core' ),
+			'settings' => 'cyberchimps_options[bl_featuredarea_button2_text]',
+			'type' => 'text'
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[bl_featuredarea_button2_url]', array(
+			'type' => 'option',
+			'sanitize_callback' => 'cyberchimps_text_sanitization'
+	) );
+	$wp_customize->add_control( 'bl_featuredarea_button2_url', array(
+			'label' => __( 'Featured Area Button2 URL', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_featured_lite_section',
+			'default' => '',
+			'settings' => 'cyberchimps_options[bl_featuredarea_button2_url]',
+			'type' => 'text'
+	) );
+	$wp_customize->add_setting( 'cyberchimps_options[bl_featuredarea_backgroundimage]', array(
+			'default' => '',
+			'type' => 'option',
+			'sanitize_callback' => 'cyberchimps_sanitize_upload'
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bl_featuredarea_backgroundimage', array(
+			'label' => __( 'Featured Area Background Image', 'cyberchimps_core' ),
+			'section' => 'cyberchimps_featured_lite_section',
+			'settings' => 'cyberchimps_options[bl_featuredarea_backgroundimage]',
+			'type' => 'image',
+	) ) );
+
+}
+add_action( 'customize_register', 'parallax_customize_register' );
+
 function cyberchimps_blog_draganddrop_defaults() {
 	$options = array(
 		'slider_lite'    => __( 'Slider Lite', 'cyberchimps_core' ),
 		'boxes_lite'     => __( 'Boxes', 'cyberchimps_core' ),
 		'portfolio_lite' => __( 'Portfolio Lite', 'cyberchimps_core' ),
 		'blog_post_page' => __( 'Post Page', 'cyberchimps_core' ),
+		'featured_lite' => __( 'Featured lite', 'cyberchimps_core' ),
 	);
 
 	return $options;
@@ -411,6 +527,12 @@ function parallax_new_addon_sections( $sections_list ) {
 		'heading' => 'cyberchimps_addons_heading'
 	);
 
+	$sections_list[] = array(
+		'id'      => 'cyberchimps_featured_lite_options',
+		'label'   => __( 'Featured lite', 'parallax' ),
+		'heading' => 'cyberchimps_blog_heading'
+	);
+
 	return $sections_list;
 }
 
@@ -426,6 +548,67 @@ function parallax_new_addon_fields( $fields_list ) {
 		'section'  => 'cyberchimps_wpforms_lite_options',
 		'heading'  => 'cyberchimps_addons_heading'
 	);
+	$fields_list[] = array(
+		'name'    => __( 'Featured Area Title', 'parallax' ),
+		'id'      => 'bl_featuredarea_title',
+		'std'     => __( 'The Future Has Arrived', 'parallax' ),
+		'type'    => 'text',
+		'section' => 'cyberchimps_featured_lite_options',
+		'heading' => 'cyberchimps_blog_heading'
+	);
+	$fields_list[] = array(
+		'name'    => __( 'Featured Area Text', 'parallax' ),
+		'id'      => 'bl_featuredarea_text',
+		'std'     => __( 'Mobile first responsive websites that look incredible on all devices.', 'parallax' ),
+		'type'    => 'editor',
+		'section' => 'cyberchimps_featured_lite_options',
+		'heading' => 'cyberchimps_blog_heading'
+	);
+	$fields_list[] = array(
+		'name'    => __( 'Featured Area Button1 Text', 'parallax' ),
+'id'      => 'bl_featuredarea_button1_text',
+'class'   => 'featuredarea_button1_toggle',
+'std'     => __( 'Free Responsive Themes', 'parallax' ),
+'type'    => 'text',
+'section' => 'cyberchimps_featured_lite_options',
+'heading' => 'cyberchimps_blog_heading'	
+);
+	$fields_list[] = array(
+		'name'    => __( 'Featured Area Button1 URL', 'parallax' ),
+		'id'      => 'bl_featuredarea_button1_url',
+		'class'   => 'featuredarea_button1_toggle',
+		'std'     => '',
+		'type'    => 'text',
+		'section' => 'cyberchimps_featured_lite_options',
+		'heading' => 'cyberchimps_blog_heading'
+	);
+	$fields_list[] = array(
+			'name'    => __( 'Featured Area Button2 Text', 'parallax' ),
+	'id'      => 'bl_featuredarea_button2_text',
+	'class'   => 'featuredarea_button2_toggle',
+	'std'     => __( 'Explore Pro Themes', 'parallax' ),
+	'type'    => 'text',
+	'section' => 'cyberchimps_featured_lite_options',
+	'heading' => 'cyberchimps_blog_heading'
+	);
+	$fields_list[] = array(
+		'name'    => __( 'Featured Area Button2 URL', 'parallax' ),
+		'id'      => 'bl_featuredarea_button2_url',
+		'class'   => 'featuredarea_button2_toggle',
+		'std'     => '',
+		'type'    => 'text',
+		'section' => 'cyberchimps_featured_lite_options',
+		'heading' => 'cyberchimps_blog_heading'
+	);
+	$fields_list[] = array(
+	'name'    => __( 'Featured Area Background Image', 'parallax' ),
+	'id'      => 'bl_featuredarea_backgroundimage',
+	'class'   => 'custom_featuredbg_options_toggle',
+	'std'     => '',
+	'type'    => 'upload',
+	'section' => 'cyberchimps_featured_lite_options',
+	'heading' => 'cyberchimps_blog_heading'
+);
 
 	return $fields_list;
 }
