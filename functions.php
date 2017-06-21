@@ -75,6 +75,35 @@ function cyberchimps_instantiate_class() {
 add_action( 'after_setup_theme', 'cyberchimps_instantiate_class' );
 
 
+
+function editparallax_customize_register( $wp_customize ){
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector' => '.site-title',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector' => '.site-description',
+	) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[searchbar]', array(
+		'selector' => '#navigation #searchform'
+) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[custom_logo]', array(
+		'selector' => '#logo'
+) );
+$wp_customize->selective_refresh->add_partial( 'nav_menu_locations[primary]', array(
+		'selector' => '#navigation'
+) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[theme_backgrounds]', array(
+		'selector' => '#social'
+) );
+
+	$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[footer_show_toggle]', array(
+		'selector' => '#footer-widget-container'
+) );
+
+}
+add_action( 'customize_register', 'editparallax_customize_register' );
+add_theme_support( 'customize-selective-refresh-widgets' );
+
 if ( !function_exists( 'cyberchimps_comment' ) ) :
 
 // Template for comments and pingbacks.

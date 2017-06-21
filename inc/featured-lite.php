@@ -144,13 +144,13 @@ function cyberchimps_featured_lite_content() {
 		$featuredarea_button1_url               = cyberchimps_get_option( 'bl_featuredarea_button1_url', 'CyberChimps' );
 		$featuredarea_button2_text              = cyberchimps_get_option( 'bl_featuredarea_button2_text', 'CyberChimps' );
 		$featuredarea_button2_url               = cyberchimps_get_option( 'bl_featuredarea_button2_url', 'CyberChimps' );
-		$featuredarea_backgroundimage		= cyberchimps_get_option( 'bl_featuredarea_backgroundimage', 'CyberChimps' );
+		$featuredarea_backgroundimage		= cyberchimps_get_option( 'bl_featuredarea_backgroundimagel', 'CyberChimps' );
 	}
 	
 	$i = 0;
 	?>
 	<style>
-    #featured_lite_section{  background-image: url('<?php echo $featuredarea_backgroundimage;?>');background-size: cover;}
+    #featured_lite_section{  background: none repeat scroll 0 0; background-image: url('<?php echo $featuredarea_backgroundimage;?>');background-size: cover;}
 </style>
 			<!-- FeaturedArea without button -->
 			<div id="featuredarea_container" class="row">
