@@ -144,7 +144,7 @@ function cyberchimps_featured_lite_content() {
 		$featuredarea_button1_url               = cyberchimps_get_option( 'bl_featuredarea_button1_url', 'CyberChimps' );
 		$featuredarea_button2_text              = cyberchimps_get_option( 'bl_featuredarea_button2_text', 'CyberChimps' );
 		$featuredarea_button2_url               = cyberchimps_get_option( 'bl_featuredarea_button2_url', 'CyberChimps' );
-		$featuredarea_backgroundimage		= cyberchimps_get_option( 'bl_featuredarea_backgroundimagel', 'CyberChimps' );
+		$featuredarea_backgroundimage		= cyberchimps_get_option( 'bl_featuredarea_backgroundimage', 'CyberChimps' );
 	}
 	
 	$i = 0;
@@ -157,15 +157,15 @@ function cyberchimps_featured_lite_content() {
 				<div id="featuredarea" class="col-md-12" >
 					<div class="featuredarea-content-container">
 						<div class="featuredarea-content">							
-							<div class="featured-text-container <?php echo $class_content; ?>">
-								<h2 class="featured-title" <?php echo $title_style; ?>><?php echo $featuredarea_title ?></h2>
-								<div class="featured-text" <?php echo $text_style; ?>><?php echo $featuredarea_text ?></div>
+							<div class="featured-text-container">
+								<h2 class="featured-title" ><?php echo $featuredarea_title ?></h2>
+								<div class="featured-text" ><?php echo $featuredarea_text ?></div>
 								<div class="featured-buttons">
 									<?php if( !empty( $featuredarea_button1_text ) ){ ?> 
-										<a href="<?php echo $featuredarea_button1_url; ?>" <?php echo $style1; ?> class="btn btn-large btn-primary featured-button1"><?php echo $featuredarea_button1_text; ?></a>
+										<a href="<?php echo $featuredarea_button1_url; ?>" class="btn btn-large btn-primary featured-button1"><?php echo $featuredarea_button1_text; ?></a>
 									<?php } ?>
 									<?php if( !empty( $featuredarea_button2_text ) ){ ?> 
-										<a href="<?php echo $featuredarea_button2_url; ?>" <?php echo $style2; ?> class="btn btn-large btn-primary featured-button2"><?php echo $featuredarea_button2_text; ?></a>								
+										<a href="<?php echo $featuredarea_button2_url; ?>" class="btn btn-large btn-primary featured-button2"><?php echo $featuredarea_button2_text; ?></a>								
 									<?php } ?>
 								</div>						
 							</div>						

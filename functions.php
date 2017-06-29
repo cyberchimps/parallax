@@ -39,14 +39,9 @@ function cyberchimps_add_site_info() {
 add_action( 'cyberchimps_site_info', 'cyberchimps_add_site_info' );
 add_action( 'wp_footer', 'featured_parallax_render' );
 function featured_parallax_render() {
-$parallax_image = ( get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) ) ? get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) : '';
+//$parallax_image = ( get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) ) ? get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) : '';
 	?>
-			<!--  <script>
-				jQuery(document).ready(function () {		alert('sdf');			
-					jQuery('#featured_lite_section').parallax('50%', 0.5);					
-
-				});
-			</script>-->
+			
 			<script>
 					jQuery(document).ready(function () {
 						<?php
@@ -83,6 +78,21 @@ function editparallax_customize_register( $wp_customize ){
 	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector' => '.site-description',
 	) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[bl_featuredarea_title]', array(
+		'selector' => '.featured-title'
+) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[bl_featuredarea_text]', array(
+		'selector' => '.featured-text'
+) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[bl_featuredarea_button1_text]', array(
+		'selector' => '.featured-button1'
+) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[bl_featuredarea_button2_text]', array(
+		'selector' => '.featured-button2'
+) );
+$wp_customize->selective_refresh->add_partial( 'cyberchimps_options[bl_featuredarea_backgroundimage]', array(
+		'selector' => '#featuredarea_container'
+) );
 $wp_customize->selective_refresh->add_partial( 'cyberchimps_options[searchbar]', array(
 		'selector' => '#navigation #searchform'
 ) );
