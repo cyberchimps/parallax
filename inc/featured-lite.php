@@ -35,7 +35,7 @@ function cyberchimps_featured_lite_page_options() {
         array(
         		'name'    => __( 'Featured Area Title', 'parallax' ),
         		'id'      => 'featuredarea_title',
-        		'std'     => __( 'The Future Has Arrived', 'parallax' ),
+        		'std'     => __( 'This is Featured Area Title', 'parallax' ),
         		'type'    => 'text',
         		'section' => 'cyberchimps_featuredarea_section',
         		'heading' => 'cyberchimps_blog_heading'
@@ -43,7 +43,7 @@ function cyberchimps_featured_lite_page_options() {
         array(
         		'name'    => __( 'Featured Area Text', 'parallax' ),
         		'id'      => 'featuredarea_text',
-        		'std'     => __( 'Mobile first responsive websites that look incredible on all devices.', 'parallax' ),
+        		'std'     => __( 'Here you can place Featured Area Text.', 'parallax' ),
         		'type'    => 'editor',
         		'section' => 'cyberchimps_featuredarea_section',
         		'heading' => 'cyberchimps_blog_heading'

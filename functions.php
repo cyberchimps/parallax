@@ -378,7 +378,7 @@ function parallax_customize_register( $wp_customize )
 	$wp_customize->add_control( 'bl_featuredarea_title', array(
 			'label' => __( 'Featured Area Title', 'cyberchimps_core' ),
 			'section' => 'cyberchimps_featured_lite_section',
-			'default' => __( 'The Future Has Arrived', 'cyberchimps_core' ),
+			'default' => __( 'This is Featured Area Title', 'cyberchimps_core' ),
 			'settings' => 'cyberchimps_options[bl_featuredarea_title]',
 			'type' => 'text'
 	) );
@@ -389,7 +389,7 @@ function parallax_customize_register( $wp_customize )
 	$wp_customize->add_control( 'bl_featuredarea_text', array(
 			'label' => __( 'Featured Area Text', 'cyberchimps_core' ),
 			'section' => 'cyberchimps_featured_lite_section',
-			'default' => __( 'Parallax themev', 'cyberchimps_core' ),
+			'default' => __( 'Here you can place Featured Area Text', 'cyberchimps_core' ),
 			'settings' => 'cyberchimps_options[bl_featuredarea_text]',
 			'type' => 'textarea'
 	) );
