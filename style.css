@@ -963,7 +963,7 @@ table#wp-calendar td {
     text-align:center;
     margin: 80px 0px;
 }
-.page-template-default .featured-title {
+.featuredarea-content .featured-title {
     font-size: 4.5em;
     color: #FFF;
 font-weight: bold;
