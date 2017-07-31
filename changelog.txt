@@ -1,6 +1,9 @@
 Parallax Free Changelog
 
 ****************************
+Version 1.5 (07-31-17)
+- Added author gravatar for blog posts
+
 Version 1.4 (06-29-17)
 - Added featured area element
 
