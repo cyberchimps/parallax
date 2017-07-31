@@ -733,7 +733,17 @@ $auther_posts_url = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) )
 // Set author title text which will appear on hover over the author link.
 $auther_link_title = esc_attr( sprintf( __( 'View all posts by %s', 'cyberchimps_core' ), get_the_author() ) );
 
+// Get value of post byline author toggle option from theme option for different pages.
+if( is_single() ) {
+	$show_author = ( cyberchimps_get_option( 'single_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'single_post_byline_author', 1 ) : false;
+}
+elseif( is_archive() ) {
+	$show_author = ( cyberchimps_get_option( 'archive_post_byline_author', 1 ) ) ? cyberchimps_get_option( 'archive_post_byline_author', 1 ) : false;
+}
+else {
 	$show_author = ( cyberchimps_get_option( 'post_byline_author', 1 ) ) ? cyberchimps_get_option( 'post_byline_author', 1 ) : false;
+}
+
 	$posted_by = sprintf(
 							'<span class="byline"> ' . __( 'by %s', 'cyberchimps_core' ),
 								'<span class="author vcard">
