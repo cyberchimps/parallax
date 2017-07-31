@@ -41,14 +41,14 @@ add_action( 'wp_footer', 'featured_parallax_render' );
 function featured_parallax_render() {
 //$parallax_image = ( get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) ) ? get_post_meta( $post->ID, 'featuredarea_backgroundimage', true ) : '';
 	?>
-			
+
 			<script>
 					jQuery(document).ready(function () {
 						<?php
 						// Add parallax.
 						 ?>
 						jQuery('#featured_lite_section').css({
-							
+
 							'background-size': '100%'
 						});
 						jQuery('#featured_lite_section').parallax('50%', 0.5);
@@ -362,7 +362,7 @@ add_filter( 'cyberchimps_typography_defaults', 'cyberchimps_typography_defaults'
 add_filter( 'cyberchimps_typography_heading_defaults', 'cyberchimps_typography_heading_defaults' );
 
 function parallax_customize_register( $wp_customize )
-{ 
+{
 	$wp_customize->add_section( 'cyberchimps_featured_lite_section', array(
 			'priority' => 15,
 			'capability' => 'edit_theme_options',
@@ -470,7 +470,7 @@ add_filter( 'cyberchimps_elements_draganddrop_defaults', 'cyberchimps_blog_draga
 // Customize social icons.
 function cyberchimps_social_icon_options( $options ) {
 	$options['default'] = get_template_directory_uri() . '/images/social/icons-default.png';
-	
+
 	return $options;
 }
 add_filter( 'cyberchimps_social_icon_options', 'cyberchimps_social_icon_options' );
@@ -486,7 +486,7 @@ add_filter( 'cyberchimps_twitter_handle_filter', 'cyberchimps_twitter_handle_fil
 // Set blog layout option default
 function cyberchimps_blog_layout_options_default() {
 	return 'full_width';
-}	
+}
 add_filter( 'cyberchimps_blog_layout_options_default', 'cyberchimps_blog_layout_options_default' );
 
 // Remove header drag and drop as it is not suitable to the design in this theme.
@@ -498,7 +498,7 @@ add_filter( 'cyberchimps_sections_filter', 'cyberchimps_remove_header_drag_drop'
 function cyberchimps_parallax_upgrade_bar(){
 	$upgrade_link = apply_filters( 'cyberchimps_upgrade_link', 'http://cyberchimps.com' );
 	$pro_title = apply_filters( 'cyberchimps_upgrade_pro_title', 'CyberChimps Pro' );
-?>	
+?>
 	<br>
 	<div class="upgrade-callout">
 		<p><img src="<?php echo get_template_directory_uri(); ?>/cyberchimps/options/lib/images/chimp.png" alt="CyberChimps"/>
@@ -507,7 +507,7 @@ function cyberchimps_parallax_upgrade_bar(){
 				'<a href="' . $upgrade_link . '" target="_blank" title="' . $pro_title . '">' . $pro_title . '</a> '
 			); ?>
 		</p>
-	
+
 	<div class="social-container">
 			<div class="social">
 				<a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
@@ -527,19 +527,19 @@ function cyberchimps_parallax_upgrade_bar(){
 					scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
 			</div>
 		</div>
-	
+
 	</div>
 <h4 class="notice notice-info is-dismissible" style="margin-top:15px;">
 <p>
-<?php 
+<?php
 	$utm_link="https://cyberchimps.com/free-download-50-stock-images-use-please/?utm_source=parallax";
  	$utm_text="Get 50 Free High-Resolution Stock Images by CyberChimps";
 	printf('<a href="' . $utm_link . '" target="_blank">' . $utm_text . '</a> ');
-?>	 
+?>
 </p>
 </h4>
 
-<?php	
+<?php
 }
 
 add_action('admin_init','remove_upgrade_bar');
@@ -552,7 +552,7 @@ if( cyberchimps_theme_check() == 'free' ) {
 }
 
 // enabling theme support for title tag
-function parallax_title_setup() 
+function parallax_title_setup()
 {
 	add_theme_support( 'title-tag' );
 }
@@ -610,7 +610,7 @@ function parallax_new_addon_fields( $fields_list ) {
 'std'     => __( 'Free Responsive Themes', 'parallax' ),
 'type'    => 'text',
 'section' => 'cyberchimps_featured_lite_options',
-'heading' => 'cyberchimps_blog_heading'	
+'heading' => 'cyberchimps_blog_heading'
 );
 	$fields_list[] = array(
 		'name'    => __( 'Featured Area Button1 URL', 'parallax' ),
@@ -652,37 +652,104 @@ function parallax_new_addon_fields( $fields_list ) {
 	return $fields_list;
 }
 
-add_filter( 'cyberchimps_field_list', 'parallax_new_addon_fields', 20, 1 );
+add_action( 'admin_notices', 'parallax_admin_notices' );
+function parallax_admin_notices()
+{
+	$admin_check_screen = get_admin_page_title();
 
-// The WPForms text
-function cyberchimps_custom_wpforms_lite_callback( $value ) {
-	$output   = '';
-	$plugin   = 'wpforms-lite/wpforms.php';
-	$icon     = '<img class="plugins-icon" src="' . get_template_directory_uri() . '/images/addons/wpforms.png" />';
-	$icon_neg = '<img class="plugins-icon" src="' . get_template_directory_uri() . '/images/addons/wpforms-neg.png" />';
-
+	if( !class_exists('SlideDeckPlugin') )
+	{
+	$plugin='slidedeck/slidedeck.php';
+	$slug = 'slidedeck';
 	$installed_plugins = get_plugins();
 
-	if( isset( $installed_plugins[$plugin] ) ) {
-		if( is_plugin_active( $plugin ) ) {
-			$output .= $icon . '<a href="' . admin_url( 'admin.php?page=wpforms-settings' ) . '">' . __( 'WPForms Settings', 'parallax' ) . '</a>';
-		}
-		else {
-			$output .= $icon_neg . '<a href="' . admin_url( 'plugins.php' ) . '">' . __( 'Please activate the "WPForms Lite" plugin', 'parallax' ) . '</a>';
-		}
+	 if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+			<?php if( isset( $installed_plugins[$plugin] ) )
+			{
+			?>
+				 <a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the SlideDeck Lite plugin</a>
+			 <?php
+			}
+			else
+			{
+			 ?>
+			 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the SlideDeck Lite plugin</a>
+			 <?php } ?>
+
+		</p>
+		</div>
+		<?php
 	}
-	else {
-		$output .= $icon_neg . '<a href="' . cyberchimps_wpforms_install_link() . '">' . __( 'Install the "WPForms Lite" plugin', 'parallax' ) . '</a>';
 	}
 
-	echo $output;
-}
-
-// return a nonced installation link for the plugin.
-function cyberchimps_wpforms_install_link() {
-	include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+	if( !class_exists('WPForms') )
+	{
+	$plugin = 'wpforms-lite/wpforms.php';
 	$slug = 'wpforms-lite';
+	$installed_plugins = get_plugins();
+	 if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+			<?php if( isset( $installed_plugins[$plugin] ) )
+			{
+			?>
+				 <a href="<?php echo admin_url( 'plugins.php' ); ?>">Activate the WPForms Lite plugin</a>
+			 <?php
+			}
+			else
+			{
+			 ?>
+	 		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the WP Forms Lite plugin</a>
+			 <?php } ?>
+		</p>
+		</div>
+		<?php
+	}
+	}
 
-	return wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug );
+	if ( $admin_check_screen == 'Manage Themes' || $admin_check_screen == 'Theme Options Page' )
+	{
+	?>
+		<div class="notice notice-success is-dismissible">
+				<b><p>Liked this theme? <a href="https://wordpress.org/support/theme/parallax/reviews/#new-post" target="_blank">Leave us</a> a ***** rating. Thank you! </p></b>
+		</div>
+		<?php
+	}
+
 }
-?>
+
+add_action( 'cyberchimps_posted_by', 'parallax_byline_author' );
+function parallax_byline_author()
+{
+	// Get url of all author archive( the page will contain all posts by the author).
+$auther_posts_url = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+
+// Set author title text which will appear on hover over the author link.
+$auther_link_title = esc_attr( sprintf( __( 'View all posts by %s', 'cyberchimps_core' ), get_the_author() ) );
+
+	$show_author = ( cyberchimps_get_option( 'post_byline_author', 1 ) ) ? cyberchimps_get_option( 'post_byline_author', 1 ) : false;
+	$posted_by = sprintf(
+							'<span class="byline"> ' . __( 'by %s', 'cyberchimps_core' ),
+								'<span class="author vcard">
+									<a class="url fn n" href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="author">' . esc_html( get_the_author() ) . '</a>
+								</span>
+								<span class="avatar">
+									<a href="' . $auther_posts_url . '" title="' . $auther_link_title . '" rel="avatar">' . get_avatar( get_the_author_meta( 'ID' ), 20) . '</a>
+								</span>
+							</span>'
+
+						);
+
+	if( $show_author )
+	{
+			return $posted_by;
+	}
+
+	return;
+}

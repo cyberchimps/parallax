@@ -3,8 +3,8 @@ Theme Name: Parallax
 Theme URI:http://cyberchimps.com/parallax/
 Author: CyberChimps
 Author URI: http://www.cyberchimps.com/
-Description: Parallax is a new responsive theme from CyberChimps WordPress Themes that enables you to create stunning websites. Parallax is responsive and works on smartphones, tablets, and desktop computers and uses the latest in parallax scrolling to present beautiful background images. Parallax also includes the power of a several plugins in a single theme allowing you to setup an entire website in minutes with touch-friendly drag-and-drop options on a per-page basis allowing you control the look and feel of every page. For Support - <a href=" https://cyberchimps.com/forum/free/parallax/"> Support Forum</a> ( https://cyberchimps.com/forum/free/parallax/)
-Version: 1.4
+Description: A stunning Parallax WordPress theme - with visual elements based on the parallax design concept. Parallax is responsive and works on smartphones, tablets, and desktop computers and uses the latest in parallax scrolling to present beautiful background images. Parallax also includes the power of a several plugins in a single theme allowing you to setup an entire website in minutes with touch-friendly drag-and-drop options on a per-page basis allowing you control the look and feel of every page. Parallax has visible edit links in the customizer preview. For Support - <a href="https://cyberchimps.com/forum/free/parallax/" target="_blank"> Support forum</a> (https://cyberchimps.com/forum/free/parallax/).
+Version: 1.5
 Tags: one-column, two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, theme-options, threaded-comments, sticky-post
 Text Domain: parallax
 License: GNU General Public License version 3
@@ -1186,3 +1186,8 @@ select{
     flex-wrap: wrap;
 }
 
+/*================== Byline Author =====================*/
+.entry-meta .avatar
+{
+	float:none;
+}
