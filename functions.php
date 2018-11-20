@@ -23,6 +23,8 @@ add_action( 'after_setup_theme', 'cyberchimps_text_domain' );
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
 require_once( get_template_directory() . '/inc/featured-lite.php' );
+require_once( get_template_directory() . '/inc/testimonial_template.php' );
+
 
 // Set the content width based on the theme's design and stylesheet.
 if ( !isset( $content_width ) ) {
@@ -60,6 +62,7 @@ function featured_parallax_render() {
 function cyberchimps_parallax_script_setup() {
 
 	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/inc/js/theme.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'jquery-flexslider', $get_template_directory_uri() . '/inc/js/jquery.flexslider.js', 'jquery', '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'cyberchimps_parallax_script_setup' );
@@ -551,10 +554,58 @@ if( cyberchimps_theme_check() == 'free' ) {
 	add_action( 'cyberchimps_options_before_container', 'cyberchimps_parallax_upgrade_bar' );
 }
 
-// enabling theme support for title tag
-function parallax_title_setup()
-{
+/**
+ * [parallax_title_setup description]
+ *
+ * @return void.
+ */
+function parallax_title_setup() {
+	// enabling theme support for title tag.
 	add_theme_support( 'title-tag' );
+
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
+
+	// Adds support for editor color palette.
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name'  => __( 'Gray', 'parallax' ),
+				'slug'  => 'gray',
+				'color' => '#777',
+			),
+			array(
+				'name'  => __( 'Light Gray', 'parallax' ),
+				'slug'  => 'light-gray',
+				'color' => '#f5f5f5',
+			),
+			array(
+				'name'  => __( 'Black', 'parallax' ),
+				'slug'  => 'black',
+				'color' => '#000000',
+			),
+
+			array(
+				'name'  => __( 'Blue', 'parallax' ),
+				'slug'  => 'blue',
+				'color' => '#0286cf',
+			),
+
+			array(
+				'name'  => __( 'Legacy', 'parallax' ),
+				'slug'  => 'legacy',
+				'color' => '#b6b6b6',
+			),
+
+			array(
+				'name'  => __( 'Red', 'parallax' ),
+				'slug'  => 'red',
+				'color' => '#c80a00',
+			),
+		)
+	);
+
 }
 add_action( 'after_setup_theme', 'parallax_title_setup' );
 
@@ -763,3 +814,22 @@ else {
 
 	return;
 }
+
+
+/**
+ *  Enqueue block styles  in editor
+ */
+function parallax_block_styles() {
+	wp_enqueue_style( 'parallax-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
+
+}
+add_action( 'enqueue_block_editor_assets', 'parallax_block_styles' );
+
+/**
+ * [parallax_set_defaults description]
+ */
+function parallax_set_defaults() {
+	remove_action('testimonial', array( CyberChimpsTestimonial::instance(), 'render_display' ));
+	add_action('testimonial', 'parallax_testimonial_render_display');
+}
+add_action( 'init', 'parallax_set_defaults' );
