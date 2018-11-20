@@ -62,7 +62,7 @@ function featured_parallax_render() {
 function cyberchimps_parallax_script_setup() {
 
 	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/inc/js/theme.min.js', array( 'jquery' ) );
-	wp_enqueue_script( 'jquery-flexslider', $get_template_directory_uri() . '/inc/js/jquery.flexslider.js', 'jquery', '1.0', true );
+	wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/inc/js/jquery.flexslider.js', 'jquery', '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'cyberchimps_parallax_script_setup' );
