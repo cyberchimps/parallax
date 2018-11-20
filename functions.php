@@ -820,6 +820,8 @@ else {
  *  Enqueue block styles  in editor
  */
 function parallax_block_styles() {
+	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Spinnaker' );
+
 	wp_enqueue_style( 'parallax-gutenberg-blocks', get_stylesheet_directory_uri() . '/inc/css/gutenberg-blocks.css', array(), '1.0' );
 
 }
