@@ -8,7 +8,7 @@
 .editor-styles-wrapper p,
 .editor-block-list__block,
 .editor-rich-text {
-	font-family: Arial, Helvetica, sans-serif !important;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15.4px;
 	line-height: 1.5;
 	color: #555555;
@@ -56,9 +56,10 @@ a:focus{
 .wp-block-heading h4.editor-rich-text__tinymce,
 .wp-block-heading h5.editor-rich-text__tinymce,
 .wp-block-heading h6.editor-rich-text__tinymce {
-  margin-bottom: 15px;
-  font-weight: 400;
-  color: #c80a00;
+	font-family: Spinnaker, sans-serif;
+	margin-bottom: 15px;
+	font-weight: 400;
+	color: #c80a00;
 }
 
 .wp-block-freeform.block-library-rich-text__tinymce h1,
