@@ -62,6 +62,7 @@ function featured_parallax_render() {
 function cyberchimps_parallax_script_setup() {
 
 	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/inc/js/theme.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'jquery-flexslider', $get_template_directory_uri() . '/inc/js/jquery.flexslider.js', 'jquery', '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'cyberchimps_parallax_script_setup' );
@@ -814,17 +815,6 @@ else {
 	return;
 }
 
-
-/**
- * [parallax_enqueue description]
- *
- * @return void
- */
-function parallax_enqueue() {
-	$directory_uri = get_template_directory_uri();
-	wp_enqueue_script( 'jquery-flexslider', $directory_uri . '/inc/js/jquery.flexslider.js', 'jquery', '1.0', true );
-}
-add_action( 'wp_enqueue_scripts', 'parallax_enqueue' );
 
 /**
  *  Enqueue block styles  in editor

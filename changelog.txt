@@ -1,7 +1,7 @@
 Parallax Free Changelog
 
 ****************************
-Version 1.6 (11-16-17)
+Version 1.6 (11-20-18)
 - Added gutenberg compatibility
 - Added contact us and testimonial element
 
