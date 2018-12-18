@@ -2,65 +2,24 @@
  * Default styles
  * -----------------------------------------------------------
  */
-.wp-block-paragraph.editor-rich-text__tinymce.mce-content-body,
-.wp-block-paragraph.editor-rich-text__tinymce,
-.editor-styles-wrapper,
-.editor-styles-wrapper p,
-.editor-block-list__block,
-.editor-rich-text {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 15.4px;
-	line-height: 1.5;
-	color: #555555;
-}
 
-.edit-post-visual-editor p.wp-block-subhead,
-.wp-block-subhead.editor-rich-text__tinymce.mce-content-body,
-.wp-block-subhead.editor-rich-text__tinymce,
-.editor-block-list__block,
-.editor-block-list__block p {
-	font-size: 1em ;
-}
-
-.wp-block-freeform, .wp-block-freeform.block-library-rich-text__tinymce p{
-	font-size: .96em ;
-}
-
-.wp-block-freeform.block-library-rich-text__tinymce a,
-a{
-	color: #c80a00;
-    text-decoration: none;
-}
-
-.wp-block-freeform.block-library-rich-text__tinymce a:hover,
-.wp-block-freeform.block-library-rich-text__tinymce a:focus,
-a:hover,
-a:focus{
-	color: #005580;
-}
-
+ .wp-block-freeform.block-library-rich-text__tinymce.mce-content-body p,
+ .wp-block-freeform.block-library-rich-text__tinymce p,
+ .wp-block-paragraph.editor-rich-text__tinymce.mce-content-body,
+ .wp-block-paragraph.editor-rich-text__tinymce,
+ .editor-styles-wrapper p,
+ .edit-post-visual-editor p.wp-block-subhead,
+ .wp-block-subhead.editor-rich-text__tinymce.mce-content-body,
+ .wp-block-subhead.editor-rich-text__tinymce,
+ .editor-block-list__block p {
+ 	font-size: 1.1em;
+ 	color: inherit;
+ }
 
 /**
  * Heading styles
  * -----------------------------------------------------------
  */
-.wp-block-freeform.block-library-rich-text__tinymce h1,
-.wp-block-freeform.block-library-rich-text__tinymce h2,
-.wp-block-freeform.block-library-rich-text__tinymce h3,
-.wp-block-freeform.block-library-rich-text__tinymce h4,
-.wp-block-freeform.block-library-rich-text__tinymce h5,
-.wp-block-freeform.block-library-rich-text__tinymce h6,
-.wp-block-heading h1.editor-rich-text__tinymce,
-.wp-block-heading h2.editor-rich-text__tinymce,
-.wp-block-heading h3.editor-rich-text__tinymce,
-.wp-block-heading h4.editor-rich-text__tinymce,
-.wp-block-heading h5.editor-rich-text__tinymce,
-.wp-block-heading h6.editor-rich-text__tinymce {
-	font-family: Spinnaker, sans-serif;
-	margin-bottom: 15px;
-	font-weight: 400;
-	color: #c80a00;
-}
 
 .wp-block-freeform.block-library-rich-text__tinymce h1,
 .wp-block-heading h1.editor-rich-text__tinymce {
@@ -151,16 +110,9 @@ a:focus{
 	line-height: 1.42;
 	list-style-position: inside;
 }
-.editor-block-list__block ol li,
-.editor-block-list__block ul li{
-	font-size: .91em;
-}
 
-.editor-block-list__block ol li li,
-.editor-block-list__block ul li li{
-	font-size: 1em;
-}
-
+.editor-block-list__block ol,
+.editor-block-list__block ul,
 .editor-block-list__block-edit .wp-block-freeform ol,
 .editor-block-list__block-edit .wp-block-freeform ul{
 	font-size: 1em;
@@ -171,7 +123,6 @@ a:focus{
 .editor-block-list__block-edit ul li,
 .editor-block-list__block li{
 	line-height: 1.42;
-	color: #555555;
 }
 .editor-block-list__block-edit ul li, .editor-block-list__block li{
 	margin-bottom: 0;
